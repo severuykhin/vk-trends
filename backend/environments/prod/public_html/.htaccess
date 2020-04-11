@@ -1,0 +1,76 @@
+AddDefaultCharset UTF-8
+
+<IfModule mod_autoindex.c>
+    # Disable Indexes
+    Options -Indexes
+</IfModule>
+
+<IfModule mod_rewrite.c>
+    # Enable symlinks
+    Options +FollowSymlinks
+    # Enable mod_rewrite
+    RewriteEngine On
+
+    RewriteCond %{HTTP:X-Forwarded-Protocol} !=https
+    RewriteRule .* https://%{SERVER_NAME}%{REQUEST_URI} [R=301,L]
+
+    RewriteCond %{HTTP_HOST} ^www\.(.*)$
+    RewriteRule ^(.*)$ https://%1/$1 [L,R=301]
+
+    # Backend redirect
+    RewriteCond %{REQUEST_URI} ^/backend
+    RewriteRule ^backend/(.*)$ backend/$1 [L]
+
+    # Statics redirect
+    RewriteCond %{REQUEST_URI} ^/statics
+    RewriteRule ^statics/(.*)$ statics/$1 [L]
+
+    # Frontend redirect
+    RewriteCond %{REQUEST_URI} ^(.*)$
+    RewriteRule ^(.*)$ frontend/$1
+
+    Redirect 301 /kontakty.html https://trade43.ru/contacts
+        Redirect 301 /o-kompanii.html https://trade43.ru/about
+        Redirect 301 /rubitelnye-mashiny-i-drobilki/барабанные-рубительные-машины.html https://trade43.ru/catalog/barabannye-rubitelnye-masiny
+        Redirect 301 /rubitelnye-mashiny-i-drobilki/диско-молотковые-рубительные-машины.html https://trade43.ru/catalog/disko-molotkovye-rubitelnye-masiny
+            Redirect 301 /rubitelnye-mashiny-i-drobilki/дисковые-рубительные-машины.html https://trade43.ru/catalog/diskovye-rubitelnye-masiny
+            Redirect 301 /rubitelnye-mashiny-i-drobilki/молотковые-измельчители.html https://trade43.ru/catalog/molotkovyye-izmelchiteli-zernodrobilki
+            Redirect 301 /rubitelnye-mashiny-i-drobilki/шредеры,-дробилки-тбо.html https://trade43.ru/catalog/sredery-drobilki-poddonov
+            Redirect 301 /granulyatory.html https://trade43.ru/catalog/oborudovanie-dla-selskogo-hozajstva
+            Redirect 301 /rubitelnye-mashiny-i-drobilki.html https://trade43.ru/catalog/promyslennoe-oborudovanie
+            Redirect 301 /b-u-oborudovanie.html https://trade43.ru/catalog/bu-oborudovanie
+            Redirect 301 /drobilki-drevesnykh-otkhodov.html https://trade43.ru/catalog/promyslennoe-oborudovanie
+            Redirect 301 /rubitelnye-mashiny-i-drobilki/стружечный-станок.html https://trade43.ru/catalog/struzecnye-stanki
+            Redirect 301 /tsena-na-rubitelnye-mashiny.html https://trade43.ru/catalog/diskovye-rubitelnye-masiny
+            Redirect 301 /заказать-запчасти.html https://trade43.ru/buy
+            Redirect 301 /sistema-aspiratsii/циклоны-осадители.html https://trade43.ru/catalog/tsiklony-osaditeli
+            Redirect 301 /diskovye-stanki/стружечные-станки.html https://trade43.ru/catalog/struzecnye-stanki
+            Redirect 301 /drobilki-v-kirove.html https://trade43.ru/catalog/promyslennoe-oborudovanie
+            Redirect 301 /rubitelnye-mashiny-v-kirove.html https://trade43.ru/catalog/promyslennoe-oborudovanie
+            Redirect 301 /pelletnye-linii.html https://trade43.ru/catalog/linii-dla-proizvodstva-drevesnoj-muki
+
+            Redirect 301 /sushilki/рубительные-машины-es.html https://trade43.ru/catalog/disko-molotkovye-rubitelnye-masiny
+            Redirect 301 /diskovye-stanki/рубительные-машины-es-bx350.html https://trade43.ru/product/rubitelnaya-mashina-drovosek-mod-vkh350
+            Redirect 301 /granulyatory/рубительные-машины-es-bx400.html https://trade43.ru/product/rubitelnaya-mashina-drovosek-mod-vh400
+            Redirect 301 /teplogeneratory/рубительные-машины-es-bx600.html https://trade43.ru/product/rubitelnaya-mashina-drovosek-mod-vkh600
+            Redirect 301 /rubitelnye-mashiny-i-drobilki/244-рубительные-машины-m.html https://trade43.ru/catalog/diskovye-rubitelnye-masiny
+            Redirect 301 /granulyatory/грануляторы-огм.html https://trade43.ru/catalog/granulyatory-s-koltsevoy-matritsey
+            Redirect 301 /granulyatory/грануляторы-r-type.html https://trade43.ru/catalog/mini-granulyatory-s-nepodvizhnoy-matritsey-2
+            Redirect 301 /granulyatory/грануляторы-с-плоской-неподвижной-матрицей-r-type.html https://trade43.ru/catalog/mini-granulyatory-s-nepodvizhnoy-matritsey-2
+            Redirect 301 /granulyatory/грануляторы-с-кольцевой-матрицей.html https://trade43.ru/catalog/granulyatory-s-koltsevoy-matritsey
+            Redirect 301 /granulyatory/грануляторы-кмпм.html https://trade43.ru/catalog/granulyatory-s-koltsevoy-matritsey
+            Redirect 301 /granulyatory/садовая-бытовая-дробилка-дровосек-мод-мр300.html https://trade43.ru/catalog/oborudovanie-dla-sada
+            Redirect 301 /sushilki/шредеры-двухвальные-дшв.html https://trade43.ru/catalog/sredery-drobilki-poddonov
+            Redirect 301 /linii-proizvodstva-drevesnoj-muki/линия-производства-древесной-муки-200-400-кг-час.html https://trade43.ru/catalog/linii-dla-proizvodstva-drevesnoj-muki
+            Redirect 301 /rubitelnye-mashiny-i-drobilki/стружечный-станок.html https://trade43.ru/catalog/struzecnye-stanki
+            Redirect 301 /press-dlya-briketov/пресс-для-брикетов-бп-250-250-кг-час.html https://trade43.ru/product/press-dlya-toplivnykh-briketov-mod-bp-250
+            Redirect 301 /press-dlya-briketov/пресс-для-брикетов-бп-350-350-кг-час.html https://trade43.ru/product/press-dlya-toplivnykh-briketov-mod-bp-350
+            Redirect 301 /press-dlya-briketov.html https://trade43.ru/catalog/pressy-dla-briketov
+            Redirect 301 /pelletnye-linii/линия-гранулирования-400-кг-час.html https://trade43.ru/product/liniya-oborudovaniya-dlya-proizvodstva-toplivnykh-pellet-400-kgchas
+            Redirect 301 /pelletnye-linii/линия-гранулирования-700-кг-час.html https://trade43.ru/product/liniya-oborudovaniya-dlya-proizvodstva-toplivnykh-pellet-700-kgchas
+            Redirect 301 /pelletnye-linii/пеллетная-линия-mpl-300.html https://trade43.ru/product/liniya-oborudovaniya-dlya-proizvodstva-toplivnykh-pellet-mpl-300-400-kgchas
+            Redirect 301 /sushilki/сушилка-аэродинамическая-для-опила.html https://trade43.ru/catalog/susilnoe-oborudovanie-dla-sepy-opila
+            Redirect 301 /sistema-aspiratsii/циклоны-осадители.html https://trade43.ru/catalog/tsiklony-osaditeli
+            Redirect 301 /tsena-na-granulyatory/41-цены/98-четырехсторонние-станки.html https://trade43.ru/product/chetyrekhstoronniy-shestishpindelnyy-stanok-mod-623
+
+</IfModule>

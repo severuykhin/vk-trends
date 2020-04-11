@@ -1,0 +1,33 @@
+AddDefaultCharset UTF-8
+
+<IfModule mod_autoindex.c>
+    # Disable Indexes
+    Options -Indexes
+</IfModule>
+
+<IfModule mod_rewrite.c>
+    # Enable symlinks
+    Options +FollowSymlinks
+    # Enable mod_rewrite
+    RewriteEngine On
+
+    # Api redirect
+    RewriteCond %{REQUEST_URI} ^/api
+    RewriteRule ^api/(.*)$ api/$1 [L]
+
+    # Backend redirect
+    RewriteCond %{REQUEST_URI} ^/backend
+    RewriteRule ^backend/(.*)$ backend/$1 [L]
+
+    # En backend redirect
+    RewriteCond %{REQUEST_URI} ^/en/backend
+    RewriteRule ^en/backend/(.*)$ backend/$1 [L]
+
+    # Statics redirect
+    RewriteCond %{REQUEST_URI} ^/statics
+    RewriteRule ^statics/(.*)$ statics/$1 [L]
+
+    # Frontend redirect
+    RewriteCond %{REQUEST_URI} ^(.*)$
+    RewriteRule ^(.*)$ frontend/$1
+</IfModule>
