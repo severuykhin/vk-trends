@@ -40,6 +40,9 @@ return [
             'enableStrictParsing' => false,
             'showScriptName' => false,
             'class' => 'common\components\LangUrlManager',
+            'rules' => [
+                'group/<id>/process' => 'group/process'
+            ]
         ],
         'frontendUrlManager' => [
             'class' => 'yii\web\urlManager',
@@ -49,6 +52,7 @@ return [
             'showScriptName' => false,
             'rules' => [
                 '' => 'site/index',
+                'group/<id>/process' => 'group/process'
             ]
         ],
         'errorHandler' => [

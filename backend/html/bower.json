@@ -1,0 +1,22 @@
+{
+  "name": "ramstel",
+  "version": "0.1.0",
+  "description": "ramstel",
+  "authors": [
+    "Lihachev Alexey"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "v4.0.0-alpha.6",
+    "jquery": "^3.1.1",
+    "malihu-custom-scrollbar-plugin": "3.1.5",
+    "jquery_lazyload": "jquery.lazyload#^1.9.7"
+  }
+}

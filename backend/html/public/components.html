@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Компоненты верстки</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="site-wrapper">
+      <div class="header">
+        <div class="container container-custom">
+          <div class="header__container">
+            <div class="header__logo">
+              <div class="logo"><a href="/"><img class="img logo__img" src="images/logo.png"></a></div>
+            </div>
+            <nav class="header__nav hidden-sm-down">
+              <ul class="ul header__points text_14 text_bold text_gray">
+                <li class="li header__point"><a href="#">Отзывы</a></li>
+                <li class="li header__point"><a href="#">Оплата и доставка</a></li>
+                <li class="li header__point"><a href="#">Контакты</a></li>
+                <li class="li header__point"><a href="#">О нас</a></li>
+              </ul>
+              <ul class="ul header__points header__points_right text_14 text_bold text_gray">
+                <li class="li header__point header__point_social"><a href="#">Instagram</a></li>
+                <li class="li header__point header__point_social"><a href="#">WhatsApp</a></li>
+                <li class="li header__point header__point_social"><a href="#">Viber</a></li>
+                <li class="li header__point header__point_social"><a href="#">VK</a></li>
+              </ul>
+              <ul class="ul header__points title title_h6">
+                <li class="li header__point"><a href="#">Букеты</a></li>
+                <li class="li header__point"><a href="#">Цветы</a></li>
+                <li class="li header__point"><a href="#">Подарки</a></li>
+                <li class="li header__point"><a href="#">Упаковка</a></li>
+                <li class="li header__point"><a href="#">Акции</a></li>
+              </ul>
+              <div class="header__points header__points_right"><a class="header__phone text_20 text_bold" href="tel:+79823832078">+7 982 383-20-78</a></div>
+            </nav>
+            <div class="header__burger hidden-md-up" data-role="header-burger">
+              <div class="header__burger-line"></div>
+            </div>
+          </div>
+        </div>
+              <div class="menu hidden-md-up" data-role="header-burger-inner">
+                <nav class="container container-custom">
+                  <ul class="ul menu__main title title_menu">
+                    <li class="li menu__point menu__point_active"><a href="#">Отзывы</a>
+                    </li>
+                    <li class="li menu__point"><a href="#">Оплата и доставка</a>
+                    </li>
+                    <li class="li menu__point"><a href="#">Контакты</a>
+                    </li>
+                    <li class="li menu__point"><a href="#">О нас</a>
+                    </li>
+                  </ul>
+                  <div class="menu__phone link"><a class="title title_h3" href="tel:+79823832078">+7 982 383-20-78</a></div>
+                  <ul class="ul menu__social text_14">
+                    <div class="row">
+                      <div class="col-8">
+                        <li class="li menu__point"><a class="link" href="#">Instagram</a></li>
+                      </div>
+                      <div class="col-8 menu__last">
+                        <li class="li menu__point"><a class="link" href="#">WhatsApp</a></li>
+                      </div>
+                      <div class="col-8">
+                        <li class="li menu__point"><a class="link" href="#">Viber</a></li>
+                      </div>
+                      <div class="col-8 menu__last">
+                        <li class="li menu__point"><a class="link" href="#">VK</a></li>
+                      </div>
+                    </div>
+                  </ul>
+                </nav>
+              </div>
+      </div><br><br>
+      <div class="container container-custom"><br><br>
+        <h2>Кнопки</h2><br>
+        <div class="row">
+          <div class="col-md-4">
+            <button class="button button_primary">Подобрать</button><br><br>
+            <button class="button button_primary button_min">Подобрать</button>
+          </div>
+          <div class="col-md-6">
+            <button class="button button_secondary">Оставить отзыв</button><br><br>
+            <button class="button button_min button_secondary">Оставить отзыв</button>
+          </div>
+        </div><br><br>
+        <div class="row">
+          <div class="col-md-6">
+            <h2>Формы</h2><br>
+            <input class="form__input" placeholder="Повод"><br>
+            <input class="form__input form__input_error" placeholder="Повод">
+            <div class="form__error">Какая-то ошибка</div><br>
+            <input class="form__input form__input_success" placeholder="Повод">
+          </div>
+          <div class="col-md-5">
+            <h2>Заголовки</h2><br>
+            <h1 class="title title_h1">Заголовок H1</h1>
+            <h2 class="title title_h2">Заголовок H2</h2>
+            <h3 class="title title_h3">Заголовок H3</h3>
+            <h4 class="title title_h4">Заголовок H4</h4>
+            <h5 class="title title_h5">Заголовок H5</h5>
+            <h6 class="title title_h6">Заголовок H6</h6>
+          </div>
+          <div class="col-md-2">
+            <h2>Select</h2><br>
+                        <div class="select" data-role="select" style="z-index:undefined">
+                          <div class="select__content">
+                            <div class="select__main" data-role="select-main">recipient.name</div>
+                            <ul class="select__inner" data-role="select-inner">
+                              <li class="select__point">
+                                <input class="select__input" type="radio" name="select" id="select1">
+                                <label class="select__label" for="select1">1</label>
+                              </li>
+                              <li class="select__point">
+                                <input class="select__input" type="radio" name="select" id="select2">
+                                <label class="select__label" for="select2">2</label>
+                              </li>
+                              <li class="select__point">
+                                <input class="select__input" type="radio" name="select" id="select3">
+                                <label class="select__label" for="select3">3</label>
+                              </li>
+                              <li class="select__point">
+                                <input class="select__input" type="radio" name="select" id="select4">
+                                <label class="select__label" for="select4">4</label>
+                              </li>
+                              <li class="select__point">
+                                <input class="select__input" type="radio" name="select" id="select5">
+                                <label class="select__label" for="select5">5</label>
+                              </li>
+                              <li class="select__point">
+                                <input class="select__input" type="radio" name="select" id="select6">
+                                <label class="select__label" for="select6">6</label>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+          </div>
+        </div><br><br>
+        <h2>Карточка товара</h2><br>
+        <div class="row">
+          <div class="col-8 col-md-4 col-lg-4"><a href="#">
+              <div class="card">
+                <div class="card__image"><img class="card__img img jsLazy" data-original="images/card__img.png" src="images/placeholder.jpg" alt="Букет «Тифани Сонг»"></div>
+                <div class="card__info text text_20"><strong class="card__name text_bold">Букет «Тифани Сонг»</strong>
+                  <div class="card__price">2990 руб.</div>
+                  <div class="card__more"><a class="link" href="#">Заказать</a></div>
+                </div>
+              </div></a></div>
+          <div class="col-8 col-md-4 col-lg-4"><a href="#">
+              <div class="card">
+                <div class="card__image"><img class="card__img img jsLazy" data-original="images/card__img.png" src="images/placeholder.jpg" alt="Букет «Тифани Сонг»"></div>
+                <div class="card__info text text_20"><strong class="card__name text_bold">Букет «Тифани Сонг»</strong>
+                  <div class="card__price">2990 руб.</div>
+                  <div class="card__more"><a class="link" href="#">Заказать</a></div>
+                </div>
+              </div></a></div>
+          <div class="col-8 col-md-4 col-lg-4"><a href="#">
+              <div class="card">
+                <div class="card__image"><img class="card__img img jsLazy" data-original="images/card__img.png" src="images/placeholder.jpg" alt="Букет «Тифани Сонг»"></div>
+                <div class="card__info text text_20"><strong class="card__name text_bold">Букет «Тифани Сонг»</strong>
+                  <div class="card__price">2990 руб.</div>
+                  <div class="card__more"><a class="link" href="#">Заказать</a></div>
+                </div>
+              </div></a></div>
+          <div class="col-8 col-md-4 col-lg-4"><a href="#">
+              <div class="card">
+                <div class="card__image"><img class="card__img img jsLazy" data-original="images/card__img.png" src="images/placeholder.jpg" alt="Букет «Тифани Сонг»"></div>
+                <div class="card__info text text_20"><strong class="card__name text_bold">Букет «Тифани Сонг»</strong>
+                  <div class="card__price">2990 руб.</div>
+                  <div class="card__more"><a class="link" href="#">Заказать</a></div>
+                </div>
+              </div></a></div>
+          <div class="col-8 col-md-4 col-lg-4"><a href="#">
+              <div class="card">
+                <div class="card__image"><img class="card__img img jsLazy" data-original="images/card__img.png" src="images/placeholder.jpg" alt="Букет «Тифани Сонг»"></div>
+                <div class="card__info text text_20"><strong class="card__name text_bold">Букет «Тифани Сонг»</strong>
+                  <div class="card__price">2990 руб.</div>
+                  <div class="card__more"><a class="link" href="#">Заказать</a></div>
+                </div>
+              </div></a></div>
+          <div class="col-8 col-md-4 col-lg-4"><a href="#">
+              <div class="card">
+                <div class="card__image"><img class="card__img img jsLazy" data-original="images/card__img.png" src="images/placeholder.jpg" alt="Букет «Тифани Сонг»"></div>
+                <div class="card__info text text_20"><strong class="card__name text_bold">Букет «Тифани Сонг»</strong>
+                  <div class="card__price">2990 руб.</div>
+                  <div class="card__more"><a class="link" href="#">Заказать</a></div>
+                </div>
+              </div></a></div>
+          <div class="col-8 col-md-4 col-lg-4"><a href="#">
+              <div class="card">
+                <div class="card__image"><img class="card__img img jsLazy" data-original="images/card__img.png" src="images/placeholder.jpg" alt="Букет «Тифани Сонг»"></div>
+                <div class="card__info text text_20"><strong class="card__name text_bold">Букет «Тифани Сонг»</strong>
+                  <div class="card__price">2990 руб.</div>
+                  <div class="card__more"><a class="link" href="#">Заказать</a></div>
+                </div>
+              </div></a></div>
+        </div><br><br>
+        <h2>Слайдер</h2><br>
+      </div>
+      <div class="slider-reviews">
+        <div class="slider-reviews__slider" data-role="slider-reviews">
+          <div class="slider-reviews__slide text_center">
+            <div class="slider-reviews__inner">
+              <svg class="slider-reviews__quotes" width="55" height="46" viewBox="0 0 55 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14.5588 46C20.7353 46 25.5882 42.2903 25.5882 36.0581C15.8824 33.6839 10.7353 27.6 10.7353 20.4774C10.7353 14.6903 14.7059 7.86452 24.4118 1.1871L23.8235 0C7.64706 9.79355 0 19.8839 0 29.9742C0 39.9161 7.35294 46 14.5588 46ZM43.9706 46C50.1471 46 55 42.2903 55 36.0581C45.2941 33.6839 40.1471 27.6 40.1471 20.4774C40.1471 14.6903 44.1176 7.86452 53.8235 1.1871L53.2353 0C37.0588 9.79355 29.4118 19.8839 29.4118 29.9742C29.4118 39.9161 36.7647 46 43.9706 46Z" fill="#FD99B3"></path>
+              </svg>
+              <div class="slider-reviews__text title title_h4">«Заказывать у вас всегда приятно. Прям неожиданно, что букет будет такой красивый) Спасибо за очередной выполненный заказ»</div>
+              <div class="slider-reviews__name text_20">Екатерина, <span class="slider-reviews__date text_gray">02.10.2019</span></div>
+            </div>
+          </div>
+          <div class="slider-reviews__slide text_center">
+            <div class="slider-reviews__inner">
+              <svg class="slider-reviews__quotes" width="55" height="46" viewBox="0 0 55 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14.5588 46C20.7353 46 25.5882 42.2903 25.5882 36.0581C15.8824 33.6839 10.7353 27.6 10.7353 20.4774C10.7353 14.6903 14.7059 7.86452 24.4118 1.1871L23.8235 0C7.64706 9.79355 0 19.8839 0 29.9742C0 39.9161 7.35294 46 14.5588 46ZM43.9706 46C50.1471 46 55 42.2903 55 36.0581C45.2941 33.6839 40.1471 27.6 40.1471 20.4774C40.1471 14.6903 44.1176 7.86452 53.8235 1.1871L53.2353 0C37.0588 9.79355 29.4118 19.8839 29.4118 29.9742C29.4118 39.9161 36.7647 46 43.9706 46Z" fill="#FD99B3"></path>
+              </svg>
+              <div class="slider-reviews__text title title_h4">«Заказывать у вас всегда приятно. Прям неожиданно, что букет будет такой красивый) Спасибо за очередной выполненный заказ»</div>
+              <div class="slider-reviews__name text_20">Екатерина, <span class="slider-reviews__date text_gray">02.10.2019</span></div>
+            </div>
+          </div>
+          <div class="slider-reviews__slide text_center">
+            <div class="slider-reviews__inner">
+              <svg class="slider-reviews__quotes" width="55" height="46" viewBox="0 0 55 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14.5588 46C20.7353 46 25.5882 42.2903 25.5882 36.0581C15.8824 33.6839 10.7353 27.6 10.7353 20.4774C10.7353 14.6903 14.7059 7.86452 24.4118 1.1871L23.8235 0C7.64706 9.79355 0 19.8839 0 29.9742C0 39.9161 7.35294 46 14.5588 46ZM43.9706 46C50.1471 46 55 42.2903 55 36.0581C45.2941 33.6839 40.1471 27.6 40.1471 20.4774C40.1471 14.6903 44.1176 7.86452 53.8235 1.1871L53.2353 0C37.0588 9.79355 29.4118 19.8839 29.4118 29.9742C29.4118 39.9161 36.7647 46 43.9706 46Z" fill="#FD99B3"></path>
+              </svg>
+              <div class="slider-reviews__text title title_h4">«Заказывать у вас всегда приятно. Прям неожиданно, что букет будет такой красивый) Спасибо за очередной выполненный заказ»</div>
+              <div class="slider-reviews__name text_20">Екатерина, <span class="slider-reviews__date text_gray">02.10.2019</span></div>
+            </div>
+          </div>
+          <div class="slider-reviews__slide text_center">
+            <div class="slider-reviews__inner">
+              <svg class="slider-reviews__quotes" width="55" height="46" viewBox="0 0 55 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14.5588 46C20.7353 46 25.5882 42.2903 25.5882 36.0581C15.8824 33.6839 10.7353 27.6 10.7353 20.4774C10.7353 14.6903 14.7059 7.86452 24.4118 1.1871L23.8235 0C7.64706 9.79355 0 19.8839 0 29.9742C0 39.9161 7.35294 46 14.5588 46ZM43.9706 46C50.1471 46 55 42.2903 55 36.0581C45.2941 33.6839 40.1471 27.6 40.1471 20.4774C40.1471 14.6903 44.1176 7.86452 53.8235 1.1871L53.2353 0C37.0588 9.79355 29.4118 19.8839 29.4118 29.9742C29.4118 39.9161 36.7647 46 43.9706 46Z" fill="#FD99B3"></path>
+              </svg>
+              <div class="slider-reviews__text title title_h4">«Заказывать у вас всегда приятно. Прям неожиданно, что букет будет такой красивый) Спасибо за очередной выполненный заказ»</div>
+              <div class="slider-reviews__name text_20">Екатерина, <span class="slider-reviews__date text_gray">02.10.2019</span></div>
+            </div>
+          </div>
+          <div class="slider-reviews__slide text_center">
+            <div class="slider-reviews__inner">
+              <svg class="slider-reviews__quotes" width="55" height="46" viewBox="0 0 55 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14.5588 46C20.7353 46 25.5882 42.2903 25.5882 36.0581C15.8824 33.6839 10.7353 27.6 10.7353 20.4774C10.7353 14.6903 14.7059 7.86452 24.4118 1.1871L23.8235 0C7.64706 9.79355 0 19.8839 0 29.9742C0 39.9161 7.35294 46 14.5588 46ZM43.9706 46C50.1471 46 55 42.2903 55 36.0581C45.2941 33.6839 40.1471 27.6 40.1471 20.4774C40.1471 14.6903 44.1176 7.86452 53.8235 1.1871L53.2353 0C37.0588 9.79355 29.4118 19.8839 29.4118 29.9742C29.4118 39.9161 36.7647 46 43.9706 46Z" fill="#FD99B3"></path>
+              </svg>
+              <div class="slider-reviews__text title title_h4">«Заказывать у вас всегда приятно. Прям неожиданно, что букет будет такой красивый) Спасибо за очередной выполненный заказ»</div>
+              <div class="slider-reviews__name text_20">Екатерина, <span class="slider-reviews__date text_gray">02.10.2019</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="slider-reviews__controls">
+          <div class="slider-reviews__dots-container"></div><a class="link slider-reviews__more text_16" href="#">Посмотреть все отзывы</a>
+        </div>
+      </div>
+      <footer class="footer text_bold">
+        <div class="container container-custom">
+          <div class="row">
+            <div class="col-16 col-md-8 col-lg-5 col-xl-6">
+              <div class="footer__logo">
+                <div class="logo"><a href="/"><img class="img logo__img" src="images/logo.png"></a></div>
+              </div>
+              <div class="footer__contacts">
+                <div class="footer__contact footer__phone"><a class="text_20 text_bold" href="tel:+79823832078">+7 982 383-20-78</a></div>
+                <div class="footer__contact">
+                  <div class="text_14 text_gray">г. Киров,  ул. Мостовицкая, д. 5</div>
+                </div>
+                <div class="footer__contact">
+                  <div class="text_14 text_gray">Режим работы: 8:00 - 22:00</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-16 col-md-8 col-lg-4 footer__second_md footer__last_lg">
+              <div class="footer__socials text_gray text_14"><a class="footer__social" href="#">Instagram</a><a class="footer__social" href="#">WhatsApp</a><a class="footer__social" href="#">Viber</a><a class="footer__social" href="#">VK</a>
+              </div>
+            </div>
+            <div class="col-16 col-md-8 col-lg-5 col-xl-4 footer__second_md">
+              <form class="footer__search" method="GET">
+                <input class="form__input form__search text_14" type="search" placeholder="Поиск букетов и подарков">
+                <button class="form__search-button" type="submit"></button>
+              </form>
+            </div>
+            <nav class="col-8 col-md-4 col-lg-3 text_14">
+              <ul class="ul">
+                <li class="li footer__point"><a href="#">О нас</a></li>
+                <li class="li footer__point"><a href="#">Отзывы</a></li>
+                <li class="li footer__point"><a href="#">Оплата и доставка</a></li>
+                <li class="li footer__point"><a href="#">Контакты</a></li>
+              </ul>
+            </nav>
+            <nav class="col-8 col-md-4 col-lg-3 title title_h6 text_gray">
+              <ul class="ul">
+                <li class="li footer__point footer__point_goods"><a href="#">Букеты</a></li>
+                <li class="li footer__point footer__point_goods"><a href="#">Цветы</a></li>
+                <li class="li footer__point footer__point_goods"><a href="#">Подарки</a></li>
+                <li class="li footer__point footer__point_goods"><a href="#">Упаковка</a></li>
+                <li class="li footer__point footer__point_goods"><a href="#">Акции</a></li>
+              </ul>
+            </nav>
+            <div class="footer__texts footer__second_md"></div>
+            <div class="col-16 col-lg-5 text text_gray text_14 footer__second_md">
+              <div class="footer__text">Флористический салон «Lady Rose», 2019</div>
+            </div>
+            <div class="col-16 col-lg-3 text text_gray text_14 footer__second_md">
+              <div class="footer__text"><a href="#">Публичная оферта</a></div>
+            </div>
+            <div class="col-16 col-lg-3 col-xl-4 text text_gray text_14 footer__second_md">
+              <div class="footer__text"><a href="#">Политика конфиденциальности</a></div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <!--svg(xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink")
+    symbol(viewBox="0 0 14 24")
+        path(d="M1.5 23L12.5 12L1.5 1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round")
+    symbol(viewBox="0 0 44 44")
+        path(d="M16.5 33L27.5 22L16.5 11" stroke-width="2" stroke-linecap="round" stroke-linejoin="round")
+    symbol#cloud(viewBox="0 0 20 20")
+        circle(cx="9" cy="9" r="8"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round")
+        path(d="M19 19L15 15"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round")
+    symbol(viewBox="0 0 20 20")
+        path(d="M1 19H19"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round")
+        path(d="M10 4L3 11V15H7L14 8M10 4L13 1L17 5L14 8M10 4L14 8"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round")
+    symbol(viewBox="0 0 18 20")
+        path(d="M1 5H3M17 5H15M3 5V17C3 18.1046 3.89543 19 5 19H13C14.1046 19 15 18.1046 15 17V5M3 5H6M15 5H12M7 9V15M11 9V15M6 5V3C6 1.89543 6.89543 1 8 1H10C11.1046 1 12 1.89543 12 3V5M6 5H12"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round")
+    symbol(viewBox="0 0 18 20")
+        path(d="M15.2711 10.3978L9.09108 16.5878C8.28089 17.3078 7.22622 17.691 6.1428 17.6591C5.05938 17.6272 4.02908 17.1826 3.26265 16.4162C2.49622 15.6497 2.05159 14.6195 2.01969 13.536C1.9878 12.4526 2.37106 11.3979 3.09108 10.5878L11.0911 2.58775C11.5687 2.13405 12.2023 1.88108 12.8611 1.88108C13.5198 1.88108 14.1535 2.13405 14.6311 2.58775C15.0964 3.05934 15.3573 3.69522 15.3573 4.35775C15.3573 5.02028 15.0964 5.65616 14.6311 6.12775L7.73108 13.0178C7.66279 13.0913 7.58069 13.1507 7.48945 13.1925C7.39822 13.2343 7.29965 13.2577 7.19936 13.2614C7.09907 13.2651 6.99904 13.2491 6.90496 13.2141C6.81089 13.1792 6.72462 13.126 6.65108 13.0578C6.57754 12.9895 6.51817 12.9074 6.47636 12.8161C6.43455 12.7249 6.41112 12.6263 6.4074 12.526C6.40369 12.4257 6.41976 12.3257 6.45471 12.2316C6.48966 12.1376 6.54279 12.0513 6.61108 11.9778L11.7411 6.85775C11.9294 6.66945 12.0352 6.41405 12.0352 6.14775C12.0352 5.88145 11.9294 5.62605 11.7411 5.43775C11.5528 5.24945 11.2974 5.14366 11.0311 5.14366C10.7648 5.14366 10.5094 5.24945 10.3211 5.43775L5.19108 10.5778C4.93438 10.8325 4.73064 11.1355 4.59161 11.4693C4.45257 11.8031 4.38099 12.1611 4.38099 12.5228C4.38099 12.8844 4.45257 13.2424 4.59161 13.5762C4.73064 13.91 4.93438 14.213 5.19108 14.4678C5.71545 14.9672 6.41189 15.2458 7.13608 15.2458C7.86027 15.2458 8.55671 14.9672 9.08108 14.4678L15.9711 7.56775C16.766 6.7147 17.1987 5.58642 17.1781 4.42062C17.1576 3.25481 16.6853 2.1425 15.8608 1.31802C15.0363 0.493542 13.924 0.0212704 12.7582 0.000701082C11.5924 -0.0198682 10.4641 0.412871 9.61108 1.20775L1.61108 9.20775C0.532277 10.4026 -0.0438939 11.9676 0.00261124 13.5767C0.0491163 15.1859 0.714711 16.715 1.86072 17.8455C3.00672 18.9761 4.54475 19.6208 6.15436 19.6454C7.76397 19.6701 9.32101 19.0727 10.5011 17.9778L16.6911 11.7978C16.7843 11.7045 16.8583 11.5938 16.9087 11.472C16.9592 11.3502 16.9852 11.2196 16.9852 11.0878C16.9852 10.9559 16.9592 10.8253 16.9087 10.7035C16.8583 10.5817 16.7843 10.471 16.6911 10.3778C16.5978 10.2845 16.4872 10.2106 16.3653 10.1601C16.2435 10.1096 16.1129 10.0837 15.9811 10.0837C15.8492 10.0837 15.7187 10.1096 15.5968 10.1601C15.475 10.2106 15.3643 10.2845 15.2711 10.3778V10.3978Z")
+    symbol(viewBox="0 0 14 8")
+        path(d="M1 1L7 7L13 1"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round")
+    
+    -->
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+      !function (i,s,o,g,r,a,m) {
+          if (typeof window[g] === "undefined") {
+              var script = s.createElement("script");
+              var node   = s.getElementsByTagName("script")[0];
+              script.src = o;
+              script.type = "text/javascript";
+              node.parentNode.insertBefore(script, node);
+          }
+      }(window, document, "js/jquery.min.js", "jQuery");
+    </script>
+    <!-- /подключение jquery-->
+    <script src="/libs.js"></script>
+    <script src="/main.js"></script>
+  </body>
+</html>

@@ -32,6 +32,7 @@ class User extends ActiveRecord implements IdentityInterface
     {
         return '{{%user}}';
     }
+    
 
     /**
      * Правила валидации

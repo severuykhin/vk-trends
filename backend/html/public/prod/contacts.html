@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lady Rose</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body></body>
+</html>
+<header>
+  <div class="header">
+    <div class="container container-custom">
+      <div class="header__container">
+        <div class="header__logo">
+          <div class="logo"><a href="/"><img class="img logo__img" src="images/logo.png"></a></div>
+        </div>
+        <nav class="header__nav hidden-sm-down">
+          <ul class="ul header__points text_14 text_bold text_gray">
+            <li class="li header__point"><a href="#">Отзывы</a></li>
+            <li class="li header__point"><a href="#">Оплата и доставка</a></li>
+            <li class="li header__point"><a href="#">Контакты</a></li>
+            <li class="li header__point"><a href="#">О нас</a></li>
+          </ul>
+          <ul class="ul header__points header__points_right text_14 text_bold text_gray">
+            <li class="li header__point header__point_social"><a href="#">Instagram</a></li>
+            <li class="li header__point header__point_social"><a href="#">WhatsApp</a></li>
+            <li class="li header__point header__point_social"><a href="#">Viber</a></li>
+            <li class="li header__point header__point_social"><a href="#">VK</a></li>
+          </ul>
+          <ul class="ul header__points title title_h6">
+            <li class="li header__point"><a href="#">Букеты</a></li>
+            <li class="li header__point"><a href="#">Цветы</a></li>
+            <li class="li header__point"><a href="#">Подарки</a></li>
+            <li class="li header__point"><a href="#">Упаковка</a></li>
+            <li class="li header__point"><a href="#">Акции</a></li>
+          </ul>
+          <div class="header__points header__points_right"><a class="header__phone text_20 text_bold" href="tel:+79823832078">+7 982 383-20-78</a></div>
+        </nav>
+        <div class="header__burger hidden-md-up" data-role="header-burger">
+          <div class="header__burger-line"></div>
+        </div>
+      </div>
+    </div>
+      <div class="menu hidden-md-up" data-role="header-burger-inner">
+        <nav class="container container-custom">
+          <ul class="ul menu__main title title_menu">
+            <li class="li menu__point menu__point_active"><a href="#">Отзывы</a>
+            </li>
+            <li class="li menu__point"><a href="#">Оплата и доставка</a>
+            </li>
+            <li class="li menu__point"><a href="#">Контакты</a>
+            </li>
+            <li class="li menu__point"><a href="#">О нас</a>
+            </li>
+          </ul>
+          <div class="menu__phone link"><a class="title title_h3" href="tel:+79823832078">+7 982 383-20-78</a></div>
+          <ul class="ul menu__social text_14">
+            <div class="row">
+              <div class="col-8">
+                <li class="li menu__point"><a class="link" href="#">Instagram</a></li>
+              </div>
+              <div class="col-8 menu__last">
+                <li class="li menu__point"><a class="link" href="#">WhatsApp</a></li>
+              </div>
+              <div class="col-8">
+                <li class="li menu__point"><a class="link" href="#">Viber</a></li>
+              </div>
+              <div class="col-8 menu__last">
+                <li class="li menu__point"><a class="link" href="#">VK</a></li>
+              </div>
+            </div>
+          </ul>
+        </nav>
+      </div>
+  </div>
+</header>
+<main class="site">
+  <div class="contacts">
+    <div class="container container-custom">
+      <h1 class="title title_h2">Контакты</h1>
+      <div class="row">
+        <div class="col-16 col-md-8 col-lg-6">
+          <div class="row">
+            <div class="col-16">
+              <div class="contacts__item">
+                <h3 class="title title_h6 text_gray contacts__title">Адрес</h3>
+                <div class="text text_20">г. Киров, ул. Мостовицкая, д. 5</div>
+              </div>
+            </div>
+            <div class="col-16">   
+              <div class="contacts__item">
+                <h3 class="title title_h6 text_gray contacts__title">Режим работы</h3>
+                <div class="text text_20">Ежедневно, 8:00 - 22:00</div>
+              </div>
+            </div>
+            <div class="col-8 col-md-16">   
+              <div class="contacts__item">
+                <h3 class="title title_h6 text_gray contacts__title">Телефон</h3><a class="text text_20" href="tel:+79823832078">+7 982 383-20-78</a>
+              </div>
+            </div>
+            <div class="col-8 col-md-16">       
+              <div class="contacts__item contacts__item_mail">
+                <h3 class="title title_h6 text_gray contacts__title">Email</h3><a class="text text_20 contacts__item-address" href="mailto:ledi-kirov@mail.ru">ledi-kirov@mail.ru</a>
+              </div>
+            </div>
+            <div class="col-16 col-lg-11">
+              <div class="contacts__item">
+                <h3 class="title title_h6 text_gray contacts__title">Социальные сети</h3>
+                <div class="row">
+                  <div class="col-8 contacts__social"><a class="text text_20" href="#">Instagram</a></div>
+                  <div class="col-8 contacts__social"><a class="text text_20" href="#">Viber</a></div>
+                  <div class="col-8 contacts__social"><a class="text text_20" href="#">WhatsApp</a></div>
+                  <div class="col-8 contacts__social"><a class="text text_20" href="#">VK</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-16 col-md-8 col-lg-10">
+          <div class="contacts__map">
+            <div id="map"></div>
+          </div>
+        </div>
+      </div>
+      <h2 class="title title_h3 padding_top_75">Юридический адрес
+        <div class="row contacts__items">
+          <div class="col-16 col-md-8 col-lg-5 contacts__first_md">
+            <div class="contacts__item">
+              <h3 class="title title_h6 text_gray contacts__title">Адрес</h3>
+              <div class="text text_20">г. Киров, ул. Мостовицкая, д. 5</div>
+            </div>
+          </div>
+          <div class="col-8 col-lg-4 contacts__second_md">
+            <div class="contacts__item">
+              <h3 class="title title_h6 text_gray contacts__title">ОГРН</h3>
+              <div class="text text_20">0000000000000</div>
+            </div>
+          </div>
+          <div class="col-8 col-lg-7 contacts__second_md">
+            <div class="contacts__item">
+              <h3 class="title title_h6 text_gray contacts__title">ИП</h3>
+              <div class="text text_20">Давыдова Н.</div>
+            </div>
+          </div>
+          <div class="col-16 col-md-8 col-lg-5 contacts__first_md">
+            <div class="contacts__item">
+              <h3 class="title title_h6 text_gray contacts__title">Телефон</h3>
+              <div class="text text_20"> <a href="tel:+79823832078">+7 982 383-20-78</a></div>
+            </div>
+          </div>
+          <div class="col-16 col-md-8 col-lg-5 contacts__second_md">
+            <div class="contacts__item">
+              <h3 class="title title_h6 text_gray contacts__title">ИНН/КПП</h3>
+              <div class="text text_20">0000000000/000000000</div>
+            </div>
+          </div>
+        </div>
+      </h2>
+    </div>
+  </div>
+  <div class="padding_top_70"></div>
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+  <div class="padding_top_40"></div>
+  <div class="container container-custom">
+    <div class="footer__line-container">
+      <div class="footer__line"></div>
+    </div>
+  </div>
+</main>
+<footer class="footer text_bold">
+  <div class="container container-custom">
+    <div class="row">
+      <div class="col-16 col-md-8 col-lg-5 col-xl-6">
+        <div class="footer__logo">
+          <div class="logo"><a href="/"><img class="img logo__img" src="images/logo.png"></a></div>
+        </div>
+        <div class="footer__contacts">
+          <div class="footer__contact footer__phone"><a class="text_20 text_bold" href="tel:+79823832078">+7 982 383-20-78</a></div>
+          <div class="footer__contact">
+            <div class="text_14 text_gray">г. Киров,  ул. Мостовицкая, д. 5</div>
+          </div>
+          <div class="footer__contact">
+            <div class="text_14 text_gray">Режим работы: 8:00 - 22:00</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-16 col-md-8 col-lg-4 footer__second_md footer__last_lg">
+        <div class="footer__socials text_gray text_14"><a class="footer__social" href="#">Instagram</a><a class="footer__social" href="#">WhatsApp</a><a class="footer__social" href="#">Viber</a><a class="footer__social" href="#">VK</a>
+        </div>
+      </div>
+      <div class="col-16 col-md-8 col-lg-5 col-xl-4 footer__second_md">
+        <form class="footer__search" method="GET">
+          <input class="form__input form__search text_14" type="search" placeholder="Поиск букетов и подарков">
+          <button class="form__search-button" type="submit"></button>
+        </form>
+      </div>
+      <nav class="col-8 col-md-4 col-lg-3 text_14">
+        <ul class="ul">
+          <li class="li footer__point"><a href="#">О нас</a></li>
+          <li class="li footer__point"><a href="#">Отзывы</a></li>
+          <li class="li footer__point"><a href="#">Оплата и доставка</a></li>
+          <li class="li footer__point"><a href="#">Контакты</a></li>
+        </ul>
+      </nav>
+      <nav class="col-8 col-md-4 col-lg-3 title title_h6 text_gray">
+        <ul class="ul">
+          <li class="li footer__point footer__point_goods"><a href="#">Букеты</a></li>
+          <li class="li footer__point footer__point_goods"><a href="#">Цветы</a></li>
+          <li class="li footer__point footer__point_goods"><a href="#">Подарки</a></li>
+          <li class="li footer__point footer__point_goods"><a href="#">Упаковка</a></li>
+          <li class="li footer__point footer__point_goods"><a href="#">Акции</a></li>
+        </ul>
+      </nav>
+      <div class="footer__texts footer__second_md"></div>
+      <div class="col-16 col-lg-5 text text_gray text_14 footer__second_md">
+        <div class="footer__text">Флористический салон «Lady Rose», 2019</div>
+      </div>
+      <div class="col-16 col-lg-3 text text_gray text_14 footer__second_md">
+        <div class="footer__text"><a href="#">Публичная оферта</a></div>
+      </div>
+      <div class="col-16 col-lg-3 col-xl-4 text text_gray text_14 footer__second_md">
+        <div class="footer__text"><a href="#">Политика конфиденциальности</a></div>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>!function(e,t,r,i,n,s,a){if(void 0===window.jQuery){var c=t.createElement("script"),o=t.getElementsByTagName("script")[0];c.src="js/jquery.min.js",c.type="text/javascript",o.parentNode.insertBefore(c,o)}}(window,document)</script>
+<script src="/libs.js"></script>
+<script src="/main.js"></script>

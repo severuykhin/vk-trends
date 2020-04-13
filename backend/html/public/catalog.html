@@ -1,0 +1,770 @@
+
+<!--шаблон страниц каталога--><!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lady Rose</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body></body>
+</html>
+<header>
+  <div class="header">
+    <div class="container container-custom">
+      <div class="header__container">
+        <div class="header__logo">
+          <div class="logo"><a href="/"><img class="img logo__img" src="images/logo.png"></a></div>
+        </div>
+        <nav class="header__nav hidden-sm-down">
+          <ul class="ul header__points text_14 text_bold text_gray">
+            <li class="li header__point"><a href="#">Отзывы</a></li>
+            <li class="li header__point"><a href="#">Оплата и доставка</a></li>
+            <li class="li header__point"><a href="#">Контакты</a></li>
+            <li class="li header__point"><a href="#">О нас</a></li>
+          </ul>
+          <ul class="ul header__points header__points_right text_14 text_bold text_gray">
+            <li class="li header__point header__point_social"><a href="#">Instagram</a></li>
+            <li class="li header__point header__point_social"><a href="#">WhatsApp</a></li>
+            <li class="li header__point header__point_social"><a href="#">Viber</a></li>
+            <li class="li header__point header__point_social"><a href="#">VK</a></li>
+          </ul>
+          <ul class="ul header__points title title_h6">
+            <li class="li header__point"><a href="#">Букеты</a></li>
+            <li class="li header__point"><a href="#">Цветы</a></li>
+            <li class="li header__point"><a href="#">Подарки</a></li>
+            <li class="li header__point"><a href="#">Упаковка</a></li>
+            <li class="li header__point"><a href="#">Акции</a></li>
+          </ul>
+          <div class="header__points header__points_right"><a class="header__phone text_20 text_bold" href="tel:+79823832078">+7 982 383-20-78</a></div>
+        </nav>
+        <div class="header__burger hidden-md-up" data-role="header-burger">
+          <div class="header__burger-line"></div>
+        </div>
+      </div>
+    </div>
+      <div class="menu hidden-md-up" data-role="header-burger-inner">
+        <nav class="container container-custom">
+          <ul class="ul menu__main title title_menu">
+            <li class="li menu__point menu__point_active"><a href="#">Отзывы</a>
+            </li>
+            <li class="li menu__point"><a href="#">Оплата и доставка</a>
+            </li>
+            <li class="li menu__point"><a href="#">Контакты</a>
+            </li>
+            <li class="li menu__point"><a href="#">О нас</a>
+            </li>
+          </ul>
+          <div class="menu__phone link"><a class="title title_h3" href="tel:+79823832078">+7 982 383-20-78</a></div>
+          <ul class="ul menu__social text_14">
+            <div class="row">
+              <div class="col-8">
+                <li class="li menu__point"><a class="link" href="#">Instagram</a></li>
+              </div>
+              <div class="col-8 menu__last">
+                <li class="li menu__point"><a class="link" href="#">WhatsApp</a></li>
+              </div>
+              <div class="col-8">
+                <li class="li menu__point"><a class="link" href="#">Viber</a></li>
+              </div>
+              <div class="col-8 menu__last">
+                <li class="li menu__point"><a class="link" href="#">VK</a></li>
+              </div>
+            </div>
+          </ul>
+        </nav>
+      </div>
+  </div>
+  <div class="header__menu hidden-md-up text_center text_bold" data-role="header-menu">
+    <div class="text_16"> <span class="header__name">Главная</span></div>
+      <div class="menu hidden-md-up menu_header" data-role="header-menu-inner">
+        <nav class="container container-custom">
+          <ul class="ul menu__main title title_menu">
+            <li class="li menu__point menu__point_active"><a href="#">Главная</a>
+            </li>
+            <li class="li menu__point"><a href="#">Букеты</a>
+            </li>
+            <li class="li menu__point"><a href="#">Цветы</a>
+            </li>
+            <li class="li menu__point"><a href="#">Подарки</a>
+            </li>
+            <li class="li menu__point"><a href="#">Упаковка</a>
+            </li>
+            <li class="li menu__point"><a href="#">Акции</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+  </div>
+</header>
+<main class="site">
+  <div class="container container-custom">
+    <div class="catalog">
+      <div class="title__container padding_top_70">
+        <h1 class="title title_h2 text_bold">300+ <span class="text_gray"> букетов</span></h1>
+        <div class="hidden-sm-down select__container select__container_min text_14">
+              <div class="select select_min" data-role="select" style="z-index:3">
+                <div class="select__content">
+                  <div class="select__main" data-role="select-main">По популярности</div>
+                  <ul class="select__inner" data-role="select-inner">
+                    <li class="select__point">
+                      <input class="select__input" type="radio" name="period" id="period1">
+                      <label class="select__label" for="period1">По популярности</label>
+                    </li>
+                    <li class="select__point">
+                      <input class="select__input" type="radio" name="period" id="period2">
+                      <label class="select__label" for="period2">По возрастанию цены</label>
+                    </li>
+                    <li class="select__point">
+                      <input class="select__input" type="radio" name="period" id="period3">
+                      <label class="select__label" for="period3">По убыванию цены</label>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+        </div>
+      </div>
+      <div class="hidden-sm-down">
+        <div class="filter-applied">
+          <div class="filter-applied__box">
+            <div class="text_14 text_red">День рождения</div>
+            <div class="filter-applied__close"></div>
+          </div>
+          <div class="filter-applied__box">
+            <div class="filter-applied__color filter__colorbox_red"></div>
+            <div class="filter-applied__close"></div>
+          </div>
+          <div class="filter-applied__box">
+            <div class="text_14 text_red">День рождения</div>
+            <div class="filter-applied__close"></div>
+          </div>
+          <div class="filter-applied__box">
+            <div class="filter-applied__color filter__colorbox_red"></div>
+            <div class="filter-applied__close"></div>
+          </div>
+          <div class="filter-applied__box">
+            <div class="text_14 text_red">День рождения</div>
+            <div class="filter-applied__close"></div>
+          </div>
+          <div class="filter-applied__box">
+            <div class="filter-applied__color filter__colorbox_red"></div>
+            <div class="filter-applied__close"></div>
+          </div>
+        </div>
+      </div>
+      <div class="row padding_top_40">
+        <div class="col-16"> </div>
+        <div class="col-16 col-md-6 col-lg-5 col-xl-4">
+          <div class="filter">
+            <form class="filter__search-form" method="GET">
+              <input class="filter__search form__search form__input text_14" type="search" placeholder="Поиск букетов">
+              <button class="form__search-button" type="submit"></button>
+            </form>
+            <button class="filter__buttons button button_secondary hidden-md-up" data-role="filter-button-mobile">Фильтры</button>
+            <div class="filter__inner" data-role="filter-container">
+              <h2 class="title title_h4 hidden-md-up">Фильтры</h2>
+              <div class="modal-product__close hidden-md-up" data-role="filter-close"></div>
+              <div class="modal-product__content">    
+                <div class="hidden-md-up select__container select__container_min text_14">
+                      <div class="select select_min" data-role="select" style="z-index:3">
+                        <div class="select__content">
+                          <div class="select__main" data-role="select-main">По популярности</div>
+                          <ul class="select__inner" data-role="select-inner">
+                            <li class="select__point">
+                              <input class="select__input" type="radio" name="period" id="period1">
+                              <label class="select__label" for="period1">По популярности</label>
+                            </li>
+                            <li class="select__point">
+                              <input class="select__input" type="radio" name="period" id="period2">
+                              <label class="select__label" for="period2">По возрастанию цены</label>
+                            </li>
+                            <li class="select__point">
+                              <input class="select__input" type="radio" name="period" id="period3">
+                              <label class="select__label" for="period3">По убыванию цены</label>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                </div>
+                <div class="filter__item text_14 text_bold">
+                  <div class="filter__name" data-role="filter-name">Цветы</div>
+                  <div class="filter__hidden">
+                    <div class="filter__hidden_row">
+                      <div class="filter__container">
+                        <input class="filter__check" type="checkbox" name="filter-flowers" id="filter-flowers-1">
+                        <label class="filter__flowers-label" for="filter-flowers-1"><img class="img" src="images/filter__img.jpg">
+                          <div class="filter__flowers-text">Розы</div>
+                        </label>
+                      </div>
+                      <div class="filter__container">
+                        <input class="filter__check" type="checkbox" name="filter-flowers" id="filter-flowers-2">
+                        <label class="filter__flowers-label" for="filter-flowers-2"><img class="img" src="images/filter__img.jpg">
+                          <div class="filter__flowers-text">Лилии</div>
+                        </label>
+                      </div>
+                      <div class="filter__container">
+                        <input class="filter__check" type="checkbox" name="filter-flowers" id="filter-flowers-3">
+                        <label class="filter__flowers-label" for="filter-flowers-3"><img class="img" src="images/filter__img.jpg">
+                          <div class="filter__flowers-text">Кустовые розы</div>
+                        </label>
+                      </div>
+                      <div class="filter__container">
+                        <input class="filter__check" type="checkbox" name="filter-flowers" id="filter-flowers-4">
+                        <label class="filter__flowers-label" for="filter-flowers-4"><img class="img" src="images/filter__img.jpg">
+                          <div class="filter__flowers-text">Пионовидные розы</div>
+                        </label>
+                      </div>
+                      <div class="filter__container">
+                        <input class="filter__check" type="checkbox" name="filter-flowers" id="filter-flowers-5">
+                        <label class="filter__flowers-label" for="filter-flowers-5"><img class="img" src="images/filter__img.jpg">
+                          <div class="filter__flowers-text">Хризантемы</div>
+                        </label>
+                      </div>
+                      <div class="filter__container">
+                        <input class="filter__check" type="checkbox" name="filter-flowers" id="filter-flowers-6">
+                        <label class="filter__flowers-label" for="filter-flowers-6"><img class="img" src="images/filter__img.jpg">
+                          <div class="filter__flowers-text">Альстромерии</div>
+                        </label>
+                      </div>
+                      <div class="filter__container">
+                        <input class="filter__check" type="checkbox" name="filter-flowers" id="filter-flowers-7">
+                        <label class="filter__flowers-label" for="filter-flowers-7"><img class="img" src="images/filter__img.jpg">
+                          <div class="filter__flowers-text">Гвоздики</div>
+                        </label>
+                      </div>
+                      <div class="filter__container">
+                        <input class="filter__check" type="checkbox" name="filter-flowers" id="filter-flowers-8">
+                        <label class="filter__flowers-label" for="filter-flowers-8"><img class="img" src="images/filter__img.jpg">
+                          <div class="filter__flowers-text">Гербера</div>
+                        </label>
+                      </div>
+                      <div class="filter__container">
+                        <input class="filter__check" type="checkbox" name="filter-flowers" id="filter-flowers-9">
+                        <label class="filter__flowers-label" for="filter-flowers-9"><img class="img" src="images/filter__img.jpg">
+                          <div class="filter__flowers-text">Ирисы</div>
+                        </label>
+                      </div>
+                      <div class="filter__container">
+                        <input class="filter__check" type="checkbox" name="filter-flowers" id="filter-flowers-10">
+                        <label class="filter__flowers-label" for="filter-flowers-10"><img class="img" src="images/filter__img.jpg">
+                          <div class="filter__flowers-text">Эустомы</div>
+                        </label>
+                      </div>
+                      <div class="filter__container">
+                        <input class="filter__check" type="checkbox" name="filter-flowers" id="filter-flowers-11">
+                        <label class="filter__flowers-label" for="filter-flowers-11"><img class="img" src="images/filter__img.jpg">
+                          <div class="filter__flowers-text">Фрезии</div>
+                        </label>
+                      </div>
+                      <div class="filter__container">
+                        <input class="filter__check" type="checkbox" name="filter-flowers" id="filter-flowers-12">
+                        <label class="filter__flowers-label" for="filter-flowers-12"><img class="img" src="images/filter__img.jpg">
+                          <div class="filter__flowers-text">Тюльпаны</div>
+                        </label>
+                      </div>
+                      <div class="filter__container">
+                        <input class="filter__check" type="checkbox" name="filter-flowers" id="filter-flowers-13">
+                        <label class="filter__flowers-label" for="filter-flowers-13"><img class="img" src="images/filter__img.jpg">
+                          <div class="filter__flowers-text">Пионы</div>
+                        </label>
+                      </div>
+                      <div class="filter__container">
+                        <input class="filter__check" type="checkbox" name="filter-flowers" id="filter-flowers-14">
+                        <label class="filter__flowers-label" for="filter-flowers-14"><img class="img" src="images/filter__img.jpg">
+                          <div class="filter__flowers-text">Амариллисы</div>
+                        </label>
+                      </div>
+                      <div class="filter__container">
+                        <input class="filter__check" type="checkbox" name="filter-flowers" id="filter-flowers-15">
+                        <label class="filter__flowers-label" for="filter-flowers-15"><img class="img" src="images/filter__img.jpg">
+                          <div class="filter__flowers-text">Анемоны</div>
+                        </label>
+                      </div>
+                      <div class="filter__container">
+                        <input class="filter__check" type="checkbox" name="filter-flowers" id="filter-flowers-16">
+                        <label class="filter__flowers-label" for="filter-flowers-16"><img class="img" src="images/filter__img.jpg">
+                          <div class="filter__flowers-text">Гиацинты</div>
+                        </label>
+                      </div>
+                      <div class="filter__container">
+                        <input class="filter__check" type="checkbox" name="filter-flowers" id="filter-flowers-17">
+                        <label class="filter__flowers-label" for="filter-flowers-17"><img class="img" src="images/filter__img.jpg">
+                          <div class="filter__flowers-text">Подсолнухи</div>
+                        </label>
+                      </div>
+                      <div class="filter__container">
+                        <input class="filter__check" type="checkbox" name="filter-flowers" id="filter-flowers-18">
+                        <label class="filter__flowers-label" for="filter-flowers-18"><img class="img" src="images/filter__img.jpg">
+                          <div class="filter__flowers-text">Ранункулюсы</div>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="filter__item text_14">
+                  <div class="filter__name text_bold" data-role="filter-name">Повод</div>
+                  <div class="filter__hidden">
+                    <div class="filter__hidden_row">
+                      <div class="filter__container">
+                        <input class="filter__check" type="radio" name="filter-reason" id="filter-reason-1">
+                        <label class="text_14 filter__button button form__input" for="filter-reason-1">День рождения</label>
+                      </div>
+                      <div class="filter__container">
+                        <input class="filter__check" type="radio" name="filter-reason" id="filter-reason-2">
+                        <label class="text_14 filter__button button form__input" for="filter-reason-2">Рождение ребенка</label>
+                      </div>
+                      <div class="filter__container">
+                        <input class="filter__check" type="radio" name="filter-reason" id="filter-reason-3">
+                        <label class="text_14 filter__button button form__input" for="filter-reason-3">Свадьба</label>
+                      </div>
+                      <div class="filter__container">
+                        <input class="filter__check" type="radio" name="filter-reason" id="filter-reason-4">
+                        <label class="text_14 filter__button button form__input" for="filter-reason-4">Юбилей</label>
+                      </div>
+                      <div class="filter__container">
+                        <input class="filter__check" type="radio" name="filter-reason" id="filter-reason-5">
+                        <label class="text_14 filter__button button form__input" for="filter-reason-5">Свидание</label>
+                      </div>
+                      <div class="filter__container">
+                        <input class="filter__check" type="radio" name="filter-reason" id="filter-reason-6">
+                        <label class="text_14 filter__button button form__input" for="filter-reason-6">Новоселье</label>
+                      </div>
+                      <div class="filter__container">
+                        <input class="filter__check" type="radio" name="filter-reason" id="filter-reason-7">
+                        <label class="text_14 filter__button button form__input" for="filter-reason-7">Бизнес</label>
+                      </div>
+                      <div class="filter__container">
+                        <input class="filter__check" type="radio" name="filter-reason" id="filter-reason-8">
+                        <label class="text_14 filter__button button form__input" for="filter-reason-8">Извинение</label>
+                      </div>
+                      <div class="filter__container">
+                        <input class="filter__check" type="radio" name="filter-reason" id="filter-reason-9">
+                        <label class="text_14 filter__button button form__input" for="filter-reason-9">Выпускной</label>
+                      </div>
+                      <div class="filter__container">
+                        <input class="filter__check" type="radio" name="filter-reason" id="filter-reason-10">
+                        <label class="text_14 filter__button button form__input" for="filter-reason-10">Последний звонок</label>
+                      </div>
+                      <div class="filter__container">
+                        <input class="filter__check" type="radio" name="filter-reason" id="filter-reason-11">
+                        <label class="text_14 filter__button button form__input" for="filter-reason-11">Новый год</label>
+                      </div>
+                      <div class="filter__container">
+                        <input class="filter__check" type="radio" name="filter-reason" id="filter-reason-12">
+                        <label class="text_14 filter__button button form__input" for="filter-reason-12">Татьянин день</label>
+                      </div>
+                      <div class="filter__container">
+                        <input class="filter__check" type="radio" name="filter-reason" id="filter-reason-13">
+                        <label class="text_14 filter__button button form__input" for="filter-reason-13">14 февраля</label>
+                      </div>
+                      <div class="filter__container">
+                        <input class="filter__check" type="radio" name="filter-reason" id="filter-reason-14">
+                        <label class="text_14 filter__button button form__input" for="filter-reason-14">23 февраля</label>
+                      </div>
+                      <div class="filter__container">
+                        <input class="filter__check" type="radio" name="filter-reason" id="filter-reason-15">
+                        <label class="text_14 filter__button button form__input" for="filter-reason-15">8 марта</label>
+                      </div>
+                      <div class="filter__container">
+                        <input class="filter__check" type="radio" name="filter-reason" id="filter-reason-16">
+                        <label class="text_14 filter__button button form__input" for="filter-reason-16">Пасха</label>
+                      </div>
+                      <div class="filter__container">
+                        <input class="filter__check" type="radio" name="filter-reason" id="filter-reason-17">
+                        <label class="text_14 filter__button button form__input" for="filter-reason-17">9 мая</label>
+                      </div>
+                      <div class="filter__container">
+                        <input class="filter__check" type="radio" name="filter-reason" id="filter-reason-18">
+                        <label class="text_14 filter__button button form__input" for="filter-reason-18">День детей</label>
+                      </div>
+                      <div class="filter__container">
+                        <input class="filter__check" type="radio" name="filter-reason" id="filter-reason-19">
+                        <label class="text_14 filter__button button form__input" for="filter-reason-19">1 сентября</label>
+                      </div>
+                      <div class="filter__container">
+                        <input class="filter__check" type="radio" name="filter-reason" id="filter-reason-20">
+                        <label class="text_14 filter__button button form__input" for="filter-reason-20">День учителя</label>
+                      </div>
+                      <div class="filter__container">
+                        <input class="filter__check" type="radio" name="filter-reason" id="filter-reason-21">
+                        <label class="text_14 filter__button button form__input" for="filter-reason-21">На каждый день</label>
+                      </div>
+                      <div class="filter__container">
+                        <input class="filter__check" type="radio" name="filter-reason" id="filter-reason-22">
+                        <label class="text_14 filter__button button form__input" for="filter-reason-22">Траур</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="filter__item">
+                  <div class="filter__name text_14" data-role="filter-name">Получатель</div>
+                  <div class="filter__hidden">
+                    <div class="filter__hidden_row">
+                      <div class="filter__container">
+                        <input class="filter__check" type="checkbox" name="filter-recipient" id="filter-recipient-1">
+                        <label class="text_14 filter__button button form__input" for="filter-recipient-1">Маме</label>
+                      </div>
+                      <div class="filter__container">
+                        <input class="filter__check" type="checkbox" name="filter-recipient" id="filter-recipient-2">
+                        <label class="text_14 filter__button button form__input" for="filter-recipient-2">Любимой</label>
+                      </div>
+                      <div class="filter__container">
+                        <input class="filter__check" type="checkbox" name="filter-recipient" id="filter-recipient-3">
+                        <label class="text_14 filter__button button form__input" for="filter-recipient-3">Женщине</label>
+                      </div>
+                      <div class="filter__container">
+                        <input class="filter__check" type="checkbox" name="filter-recipient" id="filter-recipient-4">
+                        <label class="text_14 filter__button button form__input" for="filter-recipient-4">Мужчине</label>
+                      </div>
+                      <div class="filter__container">
+                        <input class="filter__check" type="checkbox" name="filter-recipient" id="filter-recipient-5">
+                        <label class="text_14 filter__button button form__input" for="filter-recipient-5">Семье</label>
+                      </div>
+                      <div class="filter__container">
+                        <input class="filter__check" type="checkbox" name="filter-recipient" id="filter-recipient-6">
+                        <label class="text_14 filter__button button form__input" for="filter-recipient-6">Дочери</label>
+                      </div>
+                      <div class="filter__container">
+                        <input class="filter__check" type="checkbox" name="filter-recipient" id="filter-recipient-7">
+                        <label class="text_14 filter__button button form__input" for="filter-recipient-7">Ребенку</label>
+                      </div>
+                      <div class="filter__container">
+                        <input class="filter__check" type="checkbox" name="filter-recipient" id="filter-recipient-8">
+                        <label class="text_14 filter__button button form__input" for="filter-recipient-8">Сестре</label>
+                      </div>
+                      <div class="filter__container">
+                        <input class="filter__check" type="checkbox" name="filter-recipient" id="filter-recipient-9">
+                        <label class="text_14 filter__button button form__input" for="filter-recipient-9">Подруге</label>
+                      </div>
+                      <div class="filter__container">
+                        <input class="filter__check" type="checkbox" name="filter-recipient" id="filter-recipient-10">
+                        <label class="text_14 filter__button button form__input" for="filter-recipient-10">Коллеге</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="filter__item">
+                  <div class="filter__name text_14" data-role="filter-name">Цена</div>
+                  <div class="filter__hidden text_16">
+                    <div class="filter__price-row d-flex">
+                      <div class="filter__price-num">
+                        <input class="form__input filter__price-input" type="number" placeholder="от 0 руб">
+                      </div>
+                      <div class="filter__price-line">- </div>
+                      <div class="filter__price-num">
+                        <input class="form__input filter__price-input" type="number" placeholder="от 0 руб">
+                      </div>
+                    </div>
+                    <input class="filter__check" type="checkbox" name="filter-price" id="filter-price-1">
+                    <label class="filter__checkbox" for="filter-price-1">до 1000 рублей</label>
+                    <input class="filter__check" type="checkbox" name="filter-price" id="filter-price-2">
+                    <label class="filter__checkbox" for="filter-price-2">до 2000 рублей</label>
+                    <input class="filter__check" type="checkbox" name="filter-price" id="filter-price-3">
+                    <label class="filter__checkbox" for="filter-price-3">до 3000 рублей</label>
+                    <input class="filter__check" type="checkbox" name="filter-price" id="filter-price-4">
+                    <label class="filter__checkbox" for="filter-price-4">до 5000 рублей</label>
+                    <input class="filter__check" type="checkbox" name="filter-price" id="filter-price-5">
+                    <label class="filter__checkbox" for="filter-price-5">от 5000 рублей</label>
+                  </div>
+                </div>
+                <div class="filter__item">
+                  <div class="filter__name text_14" data-role="filter-name">Цветовая гамма</div>
+                  <div class="filter__hidden">
+                    <div class="filter__colorbox-row">
+                      <input class="filter__check" type="checkbox" name="filter-color" id="filter-color-1">
+                      <label class="filter__colorbox_red filter__colorbox" for="filter-color-1"></label>
+                      <input class="filter__check" type="checkbox" name="filter-color" id="filter-color-2">
+                      <label class="filter__colorbox_pink filter__colorbox" for="filter-color-2"></label>
+                      <input class="filter__check" type="checkbox" name="filter-color" id="filter-color-3">
+                      <label class="filter__colorbox_orange filter__colorbox" for="filter-color-3"></label>
+                      <input class="filter__check" type="checkbox" name="filter-color" id="filter-color-4">
+                      <label class="filter__colorbox_yellow filter__colorbox" for="filter-color-4"></label>
+                      <input class="filter__check" type="checkbox" name="filter-color" id="filter-color-5">
+                      <label class="filter__colorbox_green filter__colorbox" for="filter-color-5"></label>
+                      <input class="filter__check" type="checkbox" name="filter-color" id="filter-color-6">
+                      <label class="filter__colorbox_blue filter__colorbox" for="filter-color-6"></label>
+                      <input class="filter__check" type="checkbox" name="filter-color" id="filter-color-7">
+                      <label class="filter__colorbox_violet filter__colorbox" for="filter-color-7"></label>
+                      <input class="filter__check" type="checkbox" name="filter-color" id="filter-color-8">
+                      <label class="filter__colorbox_black filter__colorbox" for="filter-color-8"></label>
+                      <input class="filter__check" type="checkbox" name="filter-color" id="filter-color-9">
+                      <label class="filter__colorbox_white filter__colorbox" for="filter-color-9"></label>
+                      <input class="filter__check" type="checkbox" name="filter-color" id="filter-color-10">
+                      <label class="filter__colorbox_rainbow filter__colorbox" for="filter-color-10" data-role="filter-colorpicker"></label>
+                    </div>
+                  </div>
+                </div>
+                <div class="filter__item">
+                  <div class="filter__name text_14" data-role="filter-name">Категория</div>
+                  <div class="filter__hidden text_16">
+                    <input class="filter__check" type="checkbox" name="filter-category" id="filter-category-1">
+                    <label class="filter__checkbox" for="filter-category-1">Искусственные цветы</label>
+                    <input class="filter__check" type="checkbox" name="filter-category" id="filter-category-2">
+                    <label class="filter__checkbox" for="filter-category-2">Комнатные растения</label>
+                    <input class="filter__check" type="checkbox" name="filter-category" id="filter-category-3">
+                    <label class="filter__checkbox" for="filter-category-3">Сухоцветы</label>
+                    <input class="filter__check" type="checkbox" name="filter-category" id="filter-category-4">
+                    <label class="filter__checkbox" for="filter-category-4">Грунты</label>
+                  </div>
+                </div>
+                <div class="modal-product__button hidden-md-up">
+                  <button class="button button_primary" data-role="filter-close">Показать 300 букетов   </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-16 col-md-10 col-lg-11 col-xl-12">
+          <div class="hidden-md-up">
+            <div class="filter-applied">
+              <div class="filter-applied__box">
+                <div class="text_14 text_red">День рождения</div>
+                <div class="filter-applied__close"></div>
+              </div>
+              <div class="filter-applied__box">
+                <div class="filter-applied__color filter__colorbox_red"></div>
+                <div class="filter-applied__close"></div>
+              </div>
+              <div class="filter-applied__box">
+                <div class="text_14 text_red">День рождения</div>
+                <div class="filter-applied__close"></div>
+              </div>
+              <div class="filter-applied__box">
+                <div class="filter-applied__color filter__colorbox_red"></div>
+                <div class="filter-applied__close"></div>
+              </div>
+              <div class="filter-applied__box">
+                <div class="text_14 text_red">День рождения</div>
+                <div class="filter-applied__close"></div>
+              </div>
+              <div class="filter-applied__box">
+                <div class="filter-applied__color filter__colorbox_red"></div>
+                <div class="filter-applied__close"></div>
+              </div>
+            </div>
+          </div>
+          <div class="row card__row">
+            <div class="col-8 lg-col-30"><a href="#">
+                <div class="card">
+                  <div class="card__image"><img class="card__img img jsLazy" data-original="images/card__img.png" src="images/placeholder.jpg" alt="Букет «Тифани Сонг»"></div>
+                  <div class="card__info text text_20"><strong class="card__name text_bold">Букет «Тифани Сонг»</strong>
+                    <div class="card__price">2990 руб.</div>
+                    <div class="card__more"><a class="link" href="#">Заказать</a></div>
+                  </div>
+                </div></a></div>
+            <div class="col-8 lg-col-30"><a href="#">
+                <div class="card">
+                  <div class="card__image"><img class="card__img img jsLazy" data-original="images/card__img.png" src="images/placeholder.jpg" alt="Букет «Тифани Сонг»"></div>
+                  <div class="card__info text text_20"><strong class="card__name text_bold">Букет «Тифани Сонг»</strong>
+                    <div class="card__price">2990 руб.</div>
+                    <div class="card__more"><a class="link" href="#">Заказать</a></div>
+                  </div>
+                </div></a></div>
+            <div class="col-8 lg-col-30"><a href="#">
+                <div class="card">
+                  <div class="card__image"><img class="card__img img jsLazy" data-original="images/card__img.png" src="images/placeholder.jpg" alt="Букет «Тифани Сонг»"></div>
+                  <div class="card__info text text_20"><strong class="card__name text_bold">Букет «Тифани Сонг»</strong>
+                    <div class="card__price">2990 руб.</div>
+                    <div class="card__more"><a class="link" href="#">Заказать</a></div>
+                  </div>
+                </div></a></div>
+            <div class="col-8 lg-col-30"><a href="#">
+                <div class="card">
+                  <div class="card__image"><img class="card__img img jsLazy" data-original="images/card__img.png" src="images/placeholder.jpg" alt="Букет «Тифани Сонг»"></div>
+                  <div class="card__info text text_20"><strong class="card__name text_bold">Букет «Тифани Сонг»</strong>
+                    <div class="card__price">2990 руб.</div>
+                    <div class="card__more"><a class="link" href="#">Заказать</a></div>
+                  </div>
+                </div></a></div>
+            <div class="col-8 lg-col-30"><a href="#">
+                <div class="card">
+                  <div class="card__image"><img class="card__img img jsLazy" data-original="images/card__img.png" src="images/placeholder.jpg" alt="Букет «Тифани Сонг»"></div>
+                  <div class="card__info text text_20"><strong class="card__name text_bold">Букет «Тифани Сонг»</strong>
+                    <div class="card__price">2990 руб.</div>
+                    <div class="card__more"><a class="link" href="#">Заказать</a></div>
+                  </div>
+                </div></a></div>
+            <div class="col-8 lg-col-30"><a href="#">
+                <div class="card">
+                  <div class="card__image"><img class="card__img img jsLazy" data-original="images/card__img.png" src="images/placeholder.jpg" alt="Букет «Тифани Сонг»"></div>
+                  <div class="card__info text text_20"><strong class="card__name text_bold">Букет «Тифани Сонг»</strong>
+                    <div class="card__price">2990 руб.</div>
+                    <div class="card__more"><a class="link" href="#">Заказать</a></div>
+                  </div>
+                </div></a></div>
+            <div class="col-8 lg-col-30"><a href="#">
+                <div class="card">
+                  <div class="card__image"><img class="card__img img jsLazy" data-original="images/card__img.png" src="images/placeholder.jpg" alt="Букет «Тифани Сонг»"></div>
+                  <div class="card__info text text_20"><strong class="card__name text_bold">Букет «Тифани Сонг»</strong>
+                    <div class="card__price">2990 руб.</div>
+                    <div class="card__more"><a class="link" href="#">Заказать</a></div>
+                  </div>
+                </div></a></div>
+            <div class="col-8 lg-col-30"><a href="#">
+                <div class="card">
+                  <div class="card__image"><img class="card__img img jsLazy" data-original="images/card__img.png" src="images/placeholder.jpg" alt="Букет «Тифани Сонг»"></div>
+                  <div class="card__info text text_20"><strong class="card__name text_bold">Букет «Тифани Сонг»</strong>
+                    <div class="card__price">2990 руб.</div>
+                    <div class="card__more"><a class="link" href="#">Заказать</a></div>
+                  </div>
+                </div></a></div>
+            <div class="col-8 lg-col-30"><a href="#">
+                <div class="card">
+                  <div class="card__image"><img class="card__img img jsLazy" data-original="images/card__img.png" src="images/placeholder.jpg" alt="Букет «Тифани Сонг»"></div>
+                  <div class="card__info text text_20"><strong class="card__name text_bold">Букет «Тифани Сонг»</strong>
+                    <div class="card__price">2990 руб.</div>
+                    <div class="card__more"><a class="link" href="#">Заказать</a></div>
+                  </div>
+                </div></a></div>
+            <div class="col-8 lg-col-30"><a href="#">
+                <div class="card">
+                  <div class="card__image"><img class="card__img img jsLazy" data-original="images/card__img.png" src="images/placeholder.jpg" alt="Букет «Тифани Сонг»"></div>
+                  <div class="card__info text text_20"><strong class="card__name text_bold">Букет «Тифани Сонг»</strong>
+                    <div class="card__price">2990 руб.</div>
+                    <div class="card__more"><a class="link" href="#">Заказать</a></div>
+                  </div>
+                </div></a></div>
+            <div class="col-8 lg-col-30"><a href="#">
+                <div class="card">
+                  <div class="card__image"><img class="card__img img jsLazy" data-original="images/card__img.png" src="images/placeholder.jpg" alt="Букет «Тифани Сонг»"></div>
+                  <div class="card__info text text_20"><strong class="card__name text_bold">Букет «Тифани Сонг»</strong>
+                    <div class="card__price">2990 руб.</div>
+                    <div class="card__more"><a class="link" href="#">Заказать</a></div>
+                  </div>
+                </div></a></div>
+            <div class="col-8 lg-col-30"><a href="#">
+                <div class="card">
+                  <div class="card__image"><img class="card__img img jsLazy" data-original="images/card__img.png" src="images/placeholder.jpg" alt="Букет «Тифани Сонг»"></div>
+                  <div class="card__info text text_20"><strong class="card__name text_bold">Букет «Тифани Сонг»</strong>
+                    <div class="card__price">2990 руб.</div>
+                    <div class="card__more"><a class="link" href="#">Заказать</a></div>
+                  </div>
+                </div></a></div>
+            <div class="col-8 lg-col-30"><a href="#">
+                <div class="card">
+                  <div class="card__image"><img class="card__img img jsLazy" data-original="images/card__img.png" src="images/placeholder.jpg" alt="Букет «Тифани Сонг»"></div>
+                  <div class="card__info text text_20"><strong class="card__name text_bold">Букет «Тифани Сонг»</strong>
+                    <div class="card__price">2990 руб.</div>
+                    <div class="card__more"><a class="link" href="#">Заказать</a></div>
+                  </div>
+                </div></a></div>
+            <div class="col-8 lg-col-30"><a href="#">
+                <div class="card">
+                  <div class="card__image"><img class="card__img img jsLazy" data-original="images/card__img.png" src="images/placeholder.jpg" alt="Букет «Тифани Сонг»"></div>
+                  <div class="card__info text text_20"><strong class="card__name text_bold">Букет «Тифани Сонг»</strong>
+                    <div class="card__price">2990 руб.</div>
+                    <div class="card__more"><a class="link" href="#">Заказать</a></div>
+                  </div>
+                </div></a></div>
+            <div class="col-8 lg-col-30"><a href="#">
+                <div class="card">
+                  <div class="card__image"><img class="card__img img jsLazy" data-original="images/card__img.png" src="images/placeholder.jpg" alt="Букет «Тифани Сонг»"></div>
+                  <div class="card__info text text_20"><strong class="card__name text_bold">Букет «Тифани Сонг»</strong>
+                    <div class="card__price">2990 руб.</div>
+                    <div class="card__more"><a class="link" href="#">Заказать</a></div>
+                  </div>
+                </div></a></div>
+            <div class="col-8 lg-col-30"><a href="#">
+                <div class="card">
+                  <div class="card__image"><img class="card__img img jsLazy" data-original="images/card__img.png" src="images/placeholder.jpg" alt="Букет «Тифани Сонг»"></div>
+                  <div class="card__info text text_20"><strong class="card__name text_bold">Букет «Тифани Сонг»</strong>
+                    <div class="card__price">2990 руб.</div>
+                    <div class="card__more"><a class="link" href="#">Заказать</a></div>
+                  </div>
+                </div></a></div>
+          </div>
+          <div class="padding_top_40">
+            <ul class="pagination text_16">
+              <li class="pagination__item pagination__item_prev"><a href="#"></a></li>
+              <li class="pagination__item pagination__item_active"> <span>1</span></li>
+              <li class="pagination__item"><a href="#">2</a></li>
+              <li class="pagination__item"><a href="#">3</a></li>
+              <li class="pagination__item"><a href="#">4</a></li>
+              <li class="pagination__item"><a href="#">5</a></li>
+              <li class="pagination__item pagination__item_next"><a href="#"></a></li>
+            </ul>
+          </div>
+          <div class="padding_top_75"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="padding_top_40"></div>
+  <div class="container container-custom">
+    <div class="footer__line-container">
+      <div class="footer__line"></div>
+    </div>
+  </div>
+</main>
+<footer class="footer text_bold">
+  <div class="container container-custom">
+    <div class="row">
+      <div class="col-16 col-md-8 col-lg-5 col-xl-6">
+        <div class="footer__logo">
+          <div class="logo"><a href="/"><img class="img logo__img" src="images/logo.png"></a></div>
+        </div>
+        <div class="footer__contacts">
+          <div class="footer__contact footer__phone"><a class="text_20 text_bold" href="tel:+79823832078">+7 982 383-20-78</a></div>
+          <div class="footer__contact">
+            <div class="text_14 text_gray">г. Киров,  ул. Мостовицкая, д. 5</div>
+          </div>
+          <div class="footer__contact">
+            <div class="text_14 text_gray">Режим работы: 8:00 - 22:00</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-16 col-md-8 col-lg-4 footer__second_md footer__last_lg">
+        <div class="footer__socials text_gray text_14"><a class="footer__social" href="#">Instagram</a><a class="footer__social" href="#">WhatsApp</a><a class="footer__social" href="#">Viber</a><a class="footer__social" href="#">VK</a>
+        </div>
+      </div>
+      <div class="col-16 col-md-8 col-lg-5 col-xl-4 footer__second_md">
+        <form class="footer__search" method="GET">
+          <input class="form__input form__search text_14" type="search" placeholder="Поиск букетов и подарков">
+          <button class="form__search-button" type="submit"></button>
+        </form>
+      </div>
+      <nav class="col-8 col-md-4 col-lg-3 text_14">
+        <ul class="ul">
+          <li class="li footer__point"><a href="#">О нас</a></li>
+          <li class="li footer__point"><a href="#">Отзывы</a></li>
+          <li class="li footer__point"><a href="#">Оплата и доставка</a></li>
+          <li class="li footer__point"><a href="#">Контакты</a></li>
+        </ul>
+      </nav>
+      <nav class="col-8 col-md-4 col-lg-3 title title_h6 text_gray">
+        <ul class="ul">
+          <li class="li footer__point footer__point_goods"><a href="#">Букеты</a></li>
+          <li class="li footer__point footer__point_goods"><a href="#">Цветы</a></li>
+          <li class="li footer__point footer__point_goods"><a href="#">Подарки</a></li>
+          <li class="li footer__point footer__point_goods"><a href="#">Упаковка</a></li>
+          <li class="li footer__point footer__point_goods"><a href="#">Акции</a></li>
+        </ul>
+      </nav>
+      <div class="footer__texts footer__second_md"></div>
+      <div class="col-16 col-lg-5 text text_gray text_14 footer__second_md">
+        <div class="footer__text">Флористический салон «Lady Rose», 2019</div>
+      </div>
+      <div class="col-16 col-lg-3 text text_gray text_14 footer__second_md">
+        <div class="footer__text"><a href="#">Публичная оферта</a></div>
+      </div>
+      <div class="col-16 col-lg-3 col-xl-4 text text_gray text_14 footer__second_md">
+        <div class="footer__text"><a href="#">Политика конфиденциальности</a></div>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+  !function (i,s,o,g,r,a,m) {
+      if (typeof window[g] === "undefined") {
+          var script = s.createElement("script");
+          var node   = s.getElementsByTagName("script")[0];
+          script.src = o;
+          script.type = "text/javascript";
+          node.parentNode.insertBefore(script, node);
+      }
+  }(window, document, "js/jquery.min.js", "jQuery");
+</script>
+<script src="/libs.js"></script>
+<script src="/main.js"></script>

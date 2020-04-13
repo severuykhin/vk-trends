@@ -121,4 +121,22 @@ return array (
       '@yii/queue/stomp' => $vendorDir . '/yiisoft/yii2-queue/src/drivers/stomp',
     ),
   ),
+  'bupy7/yii2-grid' => 
+  array (
+    'name' => 'bupy7/yii2-grid',
+    'version' => '1.1.6.0',
+    'alias' => 
+    array (
+      '@bupy7/grid' => $vendorDir . '/bupy7/yii2-grid',
+    ),
+  ),
+  'yiisoft/yii2-bootstrap4' => 
+  array (
+    'name' => 'yiisoft/yii2-bootstrap4',
+    'version' => '2.0.8.0',
+    'alias' => 
+    array (
+      '@yii/bootstrap4' => $vendorDir . '/yiisoft/yii2-bootstrap4/src',
+    ),
+  ),
 );

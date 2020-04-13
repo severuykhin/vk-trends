@@ -36,6 +36,7 @@ class ComposerStaticInit9c5cad17b3fdae6d230c8ca9e4288208
             'yii\\composer\\' => 13,
             'yii\\codeception\\' => 16,
             'yii\\bootstrap\\' => 14,
+            'yii\\bootstrap4\\' => 15,
             'yii\\apidoc\\' => 11,
             'yii\\' => 4,
         ),
@@ -52,6 +53,10 @@ class ComposerStaticInit9c5cad17b3fdae6d230c8ca9e4288208
             'cebe\\markdown\\latex\\' => 20,
             'cebe\\markdown\\' => 14,
             'cebe\\jssearch\\' => 14,
+        ),
+        'b' => 
+        array (
+            'bupy7\\grid\\' => 11,
         ),
         'a' => 
         array (
@@ -165,6 +170,10 @@ class ComposerStaticInit9c5cad17b3fdae6d230c8ca9e4288208
         array (
             0 => __DIR__ . '/..' . '/yiisoft/yii2-bootstrap/src',
         ),
+        'yii\\bootstrap4\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/yiisoft/yii2-bootstrap4/src',
+        ),
         'yii\\apidoc\\' => 
         array (
             0 => __DIR__ . '/..' . '/yiisoft/yii2-apidoc',
@@ -192,6 +201,10 @@ class ComposerStaticInit9c5cad17b3fdae6d230c8ca9e4288208
         'cebe\\jssearch\\' => 
         array (
             0 => __DIR__ . '/..' . '/cebe/js-search/lib',
+        ),
+        'bupy7\\grid\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/bupy7/yii2-grid',
         ),
         'aquy\\thumbnail\\' => 
         array (

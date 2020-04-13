@@ -1,0 +1,77 @@
+{
+  "name": "ramstel",
+  "version": "0.1.0",
+  "description": "ramstel",
+  "main": "gulpfile.js",
+  "author": "Lihachev Alexey, Severuykhin Igor",
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^6.6.1",
+    "babel-core": "^7.0.0-0",
+    "babel-loader": "^7.1.4",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-latest": "^6.16.0",
+    "browser-sync": "^2.18.6",
+    "css-loader": "^3.2.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-clean": "^0.3.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-css-url-adjuster": "^0.2.3",
+    "gulp-group-css-media-queries": "^1.2.2",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-jshint": "^2.0.4",
+    "gulp-merge-json": "^0.6.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-postcss": "^6.3.0",
+    "gulp-pug": "^3.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-replace": "^0.5.4",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^2.0.0",
+    "jshint": "^2.10.3",
+    "jshint-stylish": "^2.2.1",
+    "postcss-csso": "^1.1.2",
+    "style-loader": "^1.0.1",
+    "ts-loader": "^6.2.1",
+    "typescript": "^3.7.3",
+    "uglify-js": "^2.8.22",
+    "uglifyjs-webpack-plugin": "^2.1.1",
+    "vinyl": "^2.0.1",
+    "vinyl-named": "^1.1.0",
+    "webpack": "4.0.0",
+    "webpack-stream": "^4.0.3"
+  },
+  "dependencies": {
+    "@babel/core": "^7.7.4",
+    "@babel/plugin-proposal-object-rest-spread": "^7.9.5",
+    "@babel/plugin-transform-regenerator": "^7.4.5",
+    "@babel/polyfill": "^7.6.0",
+    "@babel/preset-env": "^7.7.4",
+    "@babel/preset-typescript": "^7.7.4",
+    "@claviska/jquery-minicolors": "*",
+    "@fancyapps/fancybox": "3.3.5",
+    "@simonwep/pickr": "^1.4.7",
+    "@types/jquery": "^3.3.31",
+    "axios": "^0.19.0",
+    "inputmask": "^4.0.9",
+    "jquery": "*",
+    "scrollreveal": "^4.0.5",
+    "select2": "^4.0.11",
+    "slick-carousel": "*",
+    "toastr": "^2.1.4"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-typescript"
+    ]
+  },
+  "scripts": {
+    "preinstall": "npx npm-force-resolutions"
+  },
+  "resolutions": {
+    "graceful-fs": "4.2.3"
+  }
+}

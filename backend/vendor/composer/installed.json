@@ -50,7 +50,7 @@
         "version_normalized": "3.3.7.0",
         "source": {
             "type": "git",
-            "url": "https://github.com/twbs/bootstrap.git",
+            "url": "git@github.com:twbs/bootstrap.git",
             "reference": "0b9c4a4007c44201dce9a6cc1a38407005c26c86"
         },
         "dist": {
@@ -73,7 +73,7 @@
         "version_normalized": "3.3.11.0",
         "source": {
             "type": "git",
-            "url": "git@github.com:RobinHerbots/Inputmask.git",
+            "url": "https://github.com/RobinHerbots/Inputmask.git",
             "reference": "5e670ad62f50c738388d4dcec78d2888505ad77b"
         },
         "dist": {
@@ -191,6 +191,53 @@
         "installation-source": "dist",
         "license": [
             "MIT"
+        ]
+    },
+    {
+        "name": "bupy7/yii2-grid",
+        "version": "1.1.6",
+        "version_normalized": "1.1.6.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/bupy7/yii2-grid.git",
+            "reference": "343ee8f9bab48bdd7e6087b5020cc18d0c8ed46c"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/bupy7/yii2-grid/zipball/343ee8f9bab48bdd7e6087b5020cc18d0c8ed46c",
+            "reference": "343ee8f9bab48bdd7e6087b5020cc18d0c8ed46c",
+            "shasum": ""
+        },
+        "require": {
+            "npm-asset/sortablejs": "1.4.2",
+            "yiisoft/yii2": "*",
+            "yiisoft/yii2-bootstrap": "*"
+        },
+        "time": "2017-06-08T20:15:31+00:00",
+        "type": "yii2-extension",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "bupy7\\grid\\": ""
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "BSD-3-Clause"
+        ],
+        "authors": [
+            {
+                "name": "Vasilij Belosludcev",
+                "email": "bupy765@gmail.com"
+            }
+        ],
+        "description": "Simple extended `yii\\grid\\GridView` with buns.",
+        "keywords": [
+            "extension",
+            "grid",
+            "grid view",
+            "module",
+            "yii2"
         ]
     },
     {
@@ -924,6 +971,34 @@
         "keywords": [
             "parser",
             "php"
+        ]
+    },
+    {
+        "name": "npm-asset/bootstrap",
+        "version": "4.4.1",
+        "version_normalized": "4.4.1.0",
+        "dist": {
+            "type": "tar",
+            "url": "https://registry.npmjs.org/bootstrap/-/bootstrap-4.4.1.tgz"
+        },
+        "type": "npm-asset",
+        "installation-source": "dist",
+        "license": [
+            "MIT"
+        ]
+    },
+    {
+        "name": "npm-asset/sortablejs",
+        "version": "1.4.2",
+        "version_normalized": "1.4.2.0",
+        "dist": {
+            "type": "tar",
+            "url": "https://registry.npmjs.org/sortablejs/-/sortablejs-1.4.2.tgz"
+        },
+        "type": "npm-asset",
+        "installation-source": "dist",
+        "license": [
+            "MIT"
         ]
     },
     {
@@ -1759,6 +1834,77 @@
         "description": "The Twitter Bootstrap extension for the Yii framework",
         "keywords": [
             "bootstrap",
+            "yii2"
+        ]
+    },
+    {
+        "name": "yiisoft/yii2-bootstrap4",
+        "version": "2.0.8",
+        "version_normalized": "2.0.8.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/yiisoft/yii2-bootstrap4.git",
+            "reference": "c67ae3f3624c35d977841f6b18d0d752ebed6420"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/yiisoft/yii2-bootstrap4/zipball/c67ae3f3624c35d977841f6b18d0d752ebed6420",
+            "reference": "c67ae3f3624c35d977841f6b18d0d752ebed6420",
+            "shasum": ""
+        },
+        "require": {
+            "npm-asset/bootstrap": "^4.3",
+            "yiisoft/yii2": "~2.0"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "<7",
+            "yiisoft/yii2-coding-standards": "~2.0"
+        },
+        "time": "2019-10-08T11:01:37+00:00",
+        "type": "yii2-extension",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.0.x-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "yii\\bootstrap4\\": "src"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "BSD-3-Clause"
+        ],
+        "authors": [
+            {
+                "name": "Qiang Xue",
+                "email": "qiang.xue@gmail.com",
+                "homepage": "http://www.yiiframework.com/"
+            },
+            {
+                "name": "Alexander Makarov",
+                "email": "sam@rmcreative.ru",
+                "homepage": "http://rmcreative.ru/"
+            },
+            {
+                "name": "Antonio Ramirez",
+                "email": "amigo.cobos@gmail.com"
+            },
+            {
+                "name": "Paul Klimov",
+                "email": "klimov.paul@gmail.com"
+            },
+            {
+                "name": "Simon Karlen",
+                "email": "simi.albi@outlook.com"
+            }
+        ],
+        "description": "The Twitter Bootstrap extension for the Yii framework",
+        "keywords": [
+            "bootstrap",
+            "bootstrap4",
             "yii2"
         ]
     },
