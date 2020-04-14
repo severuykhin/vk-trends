@@ -68,7 +68,14 @@ class GroupController extends Controller
     {
         $model = new Group();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        if ($model->load(Yii::$app->request->post()) && $model->validate()) {
+            $model->save();
+            $data = Yii::$app->request->post('Group');
+            if (isset($data['category_ids'])) {
+                $model->saveIds($data['category_ids']);
+            } else {
+                $model->saveIds([]);
+            }
             return $this->redirect(['view', 'id' => $model->id]);
         }
 

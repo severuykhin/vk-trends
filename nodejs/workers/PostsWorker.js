@@ -22,6 +22,12 @@ class PostsWorker {
         const isExists = await this.collection.find({id: post.id}, {_id: 1}).limit(1).count();
 
         if (isExists <= 0) {
+
+            post.city = this.config.group_config.city_id.toString();
+            post.categories = this.config.group_config.categories;
+            post.lng = this.config.group_config.lng;
+            post.ltd = this.config.group_config.ltd;
+
             const mongoRes = await this.collection.insertOne(post);
             if (mongoRes.insertedId) {
                 post.mongo_id = mongoRes.insertedId;

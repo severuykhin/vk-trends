@@ -14,8 +14,11 @@ class VkApi {
             '1d97c9c24c7d48affc79ab5e6eb8b87c1cf6808e9af1939eb5ab04b7778c82912b8f704e6b1eaaebe72cf',
             '2d9d54156fa55a9965a2d7cf228da4b604ee1d09767aa8afe6c93dfa482f4e98e24c6329b475c3fdf5999',
             '317fd30f619310f4a6d654ea419b2ca00ea775cf56c63f00b685de2a940069def0abde97020ac1967066c',
-            'b4ccb301369733c20c36f300047f131ed0cdd9d30904657e51ef7cc8ba6aaa275b28af3221057f11caeeb'
-
+            'b4ccb301369733c20c36f300047f131ed0cdd9d30904657e51ef7cc8ba6aaa275b28af3221057f11caeeb',
+            '08229b433075c902502a0aba43d469baa870d1228c4d9a1d8f065315b088c2a253c154d1064925fe8c5c3',
+            'f288004307fff601dfad0613bcd060491ca42cfe35995186a1213e9a91369d8e21c47bd93243211b1de72',
+            '8c829f18bfbdcd3c411dea839931492e989f243803795a8088ef3b6ed4b833cfc3fa05ab68037c538875b',
+            '5fc2524df464b89992f2348f1f4c8f9a13f1a0abfe793582574d01475a6ef7071109230e85c896eb47f6c'
         ];
 
         this.activeToken = 0;
@@ -61,7 +64,7 @@ class VkApi {
                 params: {
                     'code': this.getWallPostsIdsExecuteCode(),
                     'group': `-${vk_group_id}`,
-                    'period': 11,
+                    'period': 1,
                     'access_token': this.getToken(),
                     'v': '5.103'
                 }

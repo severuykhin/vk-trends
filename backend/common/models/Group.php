@@ -18,6 +18,9 @@ use yii\behaviors\TimestampBehavior;
  */
 class Group extends \yii\db\ActiveRecord
 {
+
+    public $category_ids = [];
+
     /**
      * {@inheritdoc}
      */
@@ -41,6 +44,7 @@ class Group extends \yii\db\ActiveRecord
         return [
             [['vk_group_id', 'city_id', 'category_id', 'created_at', 'updated_at'], 'integer'],
             [['name'], 'string', 'max' => 255],
+            ['category_ids', 'safe']
         ];
     }
 
@@ -58,5 +62,36 @@ class Group extends \yii\db\ActiveRecord
             'created_at' => 'Created At',
             'updated_at' => 'Updated At',
         ];
+    }
+
+    public function setCategoryIds()
+    {
+        $rows = (new \yii\db\Query())
+            ->select(['category_id'])
+            ->from('group_to_category')
+            ->all();
+
+        $ids = array_map(function ($item) {
+            return $item['category_id'];
+        }, $rows);
+
+        $this->category_ids = $ids;
+    }
+
+    public function saveIds($ids)
+    {
+        Yii::$app->db->createCommand()->delete('group_to_category', 'group_id = ' . $this->id)->execute();
+
+        if (count($ids) === 0) {
+            return false;
+        }
+
+        $rows = [];
+
+        foreach($ids as $id) {
+            $rows[] = [$this->id, $id];
+        }
+
+        Yii::$app->db->createCommand()->batchInsert('group_to_category', ['group_id', 'category_id'], $rows)->execute();
     }
 }

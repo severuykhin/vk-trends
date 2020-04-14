@@ -608,7 +608,7 @@ AppAsset::register($this);
                                         <a href="/backend/group">Обзор</a>
                                     </li>
                                     <li>
-                                        <a href="#">Добавить</a>
+                                        <a href="/backend/group/create">Добавить</a>
                                     </li>
                                 </ul>
                             </div>
@@ -632,15 +632,15 @@ AppAsset::register($this);
                         <li class="sidebar-dropdown">
                             <a href="#">
                                 <i class="fa fa-chart-line"></i>
-                                <span>Charts</span>
+                                <span>Категории</span>
                             </a>
                             <div class="sidebar-submenu">
                                 <ul>
                                     <li>
-                                        <a href="#">Pie chart</a>
+                                        <a href="/backend/category">Обзор</a>
                                     </li>
                                     <li>
-                                        <a href="#">Line chart</a>
+                                        <a href="#">Добавить</a>
                                     </li>
                                     <li>
                                         <a href="#">Bar chart</a>
@@ -654,15 +654,15 @@ AppAsset::register($this);
                         <li class="sidebar-dropdown">
                             <a href="#">
                                 <i class="fa fa-globe"></i>
-                                <span>Maps</span>
+                                <span>Гео</span>
                             </a>
                             <div class="sidebar-submenu">
                                 <ul>
                                     <li>
-                                        <a href="#">Google maps</a>
+                                        <a href="/backend/city">Обзор городов</a>
                                     </li>
                                     <li>
-                                        <a href="#">Open street map</a>
+                                        <a href="/backend/city/create">Добавить город</a>
                                     </li>
                                 </ul>
                             </div>

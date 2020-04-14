@@ -27,7 +27,8 @@ app.get('/', (request, response) => {
     response.send('vk groups')
 })
 
-app.post('/api/process/:group_id', async (request, response) => {
+app.get('/api/process/:group_id', async (request, response) => {
+
     let group_id = request.params.group_id;
 
     if (!group_id) {
@@ -45,6 +46,12 @@ app.post('/api/process/:group_id', async (request, response) => {
         response.json({ result: 'error' });
     }
 })
+
+// app.get('/api/process/test', async (request, response) => {
+//     const gw = new GroupWorker(producer);
+//     const gc = await gw.getGroupConfig(60609780);
+//     response.json(gc);
+// });
 
 
 app.listen(port, (err) => {

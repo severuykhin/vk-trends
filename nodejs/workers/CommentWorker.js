@@ -16,6 +16,7 @@ class CommentWorker {
     }
 
     async run() {
+        
         const api_response = await VkApi.getPostComments(this.config.post_id, this.config.group_config.vk_group_id);
 
         if (api_response.response && api_response.response.first_level_count >= 0 && api_response.response.items) {
@@ -75,6 +76,11 @@ class CommentWorker {
         const isExists = await this.collection.find({full_id: full_id}, {_id: 1}).limit(1).count();
 
         if (isExists > 0) return false;
+
+        comment.city = this.config.group_config.city_id.toString();
+        comment.categories = this.config.group_config.categories;
+        comment.lng = this.config.group_config.lng;
+        comment.ltd = this.config.group_config.ltd;
 
         let insertRes = await this.collection.insertOne(comment);
 

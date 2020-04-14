@@ -40,6 +40,10 @@ class ComposerStaticInit9c5cad17b3fdae6d230c8ca9e4288208
             'yii\\apidoc\\' => 11,
             'yii\\' => 4,
         ),
+        'v' => 
+        array (
+            'voskobovich\\behaviors\\' => 22,
+        ),
         'p' => 
         array (
             'phpseclib\\' => 10,
@@ -50,6 +54,7 @@ class ComposerStaticInit9c5cad17b3fdae6d230c8ca9e4288208
         ),
         'c' => 
         array (
+            'creocoder\\nestedsets\\' => 21,
             'cebe\\markdown\\latex\\' => 20,
             'cebe\\markdown\\' => 14,
             'cebe\\jssearch\\' => 14,
@@ -182,6 +187,10 @@ class ComposerStaticInit9c5cad17b3fdae6d230c8ca9e4288208
         array (
             0 => __DIR__ . '/..' . '/yiisoft/yii2',
         ),
+        'voskobovich\\behaviors\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/voskobovich/yii2-many-many-behavior/src',
+        ),
         'phpseclib\\' => 
         array (
             0 => __DIR__ . '/..' . '/phpseclib/phpseclib/phpseclib',
@@ -189,6 +198,10 @@ class ComposerStaticInit9c5cad17b3fdae6d230c8ca9e4288208
         'himiklab\\sortablegrid\\' => 
         array (
             0 => __DIR__ . '/..' . '/himiklab/yii2-sortable-grid-view-widget',
+        ),
+        'creocoder\\nestedsets\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/creocoder/yii2-nested-sets/src',
         ),
         'cebe\\markdown\\latex\\' => 
         array (

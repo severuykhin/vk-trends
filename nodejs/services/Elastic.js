@@ -32,7 +32,7 @@ class Elastic {
             }
 
         } catch (e) {
-            console.log(e.meta.body.error);
+            console.log(e);
         }
 
 
@@ -65,7 +65,7 @@ class Elastic {
                         },
                         "keys": {
                             "type": "text",
-                            "norms": false,
+                            "norms": true,
                             "fields": {
                                 "keyword": {
                                     "type": "keyword",
@@ -73,9 +73,22 @@ class Elastic {
                                 }
                             }
                         },
+                        "categories": {
+                            "type": "text",
+                            "norms": true,
+                            "fields": {
+                                "keyword": {
+                                    "type": "keyword",
+                                    "ignore_above": 1024
+                                }
+                            }
+                        },
+                        "city": {"type": "text"},
                         "text": { "type": 'text' },
                         "likes": { "type": "integer" },
-                        "length": { "type": "integer" }
+                        "length": { "type": "integer" },
+                        "lng": {"type": "float"},
+                        "ltd": {"type": "float"}
                     }
                 }
             }
@@ -109,7 +122,7 @@ class Elastic {
                         },
                         "keys": {
                             "type": "text",
-                            "norms": false,
+                            "norms": true,
                             "fields": {
                                 "keyword": {
                                     "type": "keyword",
@@ -121,7 +134,20 @@ class Elastic {
                         "likes": { "type": "integer" },
                         "views": { "type": "integer" },
                         "reposts": { "type": "integer" },
-                        "length": { "type": "integer" }
+                        "length": { "type": "integer" },
+                        "categories": {
+                            "type": "text",
+                            "norms": true,
+                            "fields": {
+                                "keyword": {
+                                    "type": "keyword",
+                                    "ignore_above": 1024
+                                }
+                            }
+                        },
+                        "city": {"type": "text"},
+                        "lng": {"type": "float"},
+                        "ltd": {"type": "float"}
                     }
                 }
             }
@@ -144,7 +170,11 @@ class Elastic {
                 "keys": this.getSplittedText(comment.text),
                 "text": comment.text,
                 "likes": comment.likes ? comment.likes.count : 0,
-                "length": comment.text ? comment.text.length : 0
+                "length": comment.text ? comment.text.length : 0,
+                "categories": comment.categories && comment.categories.length > 0 ? comment.categories : [],
+                "city": comment.city ? comment.city : 0,
+                "lng": comment.lng,
+                "ltd": comment.ltd
             }
         });
 
@@ -168,7 +198,11 @@ class Elastic {
                 "likes": post.likes ? post.likes.count : 0,
                 "length": post.text ? post.text.length : 0,
                 "views": post.views && post.views.count ? post.views.count : 0,
-                "reposts": post.reposts && post.reposts.count ? post.reposts.count : 0
+                "reposts": post.reposts && post.reposts.count ? post.reposts.count : 0,
+                "categories": post.categories && post.categories.length > 0 ? post.categories : [],
+                "city": post.city ? post.city : 0,
+                "lng": post.lng,
+                "ltd": post.ltd
             }
         });
 

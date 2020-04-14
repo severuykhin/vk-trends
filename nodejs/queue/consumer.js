@@ -74,7 +74,9 @@ class Consumer {
                                     }, {
                                         $set: {errors: errorsCount}
                                     });
-                                    channel.reject(msg);
+                                    setTimeout(() => {
+                                        channel.reject(msg);
+                                    }, 100);
                                 }
                             }
                         } catch (e) {
