@@ -1,4 +1,5 @@
 const mysql = require("promise-mysql");
+const config = require("../config/mysql");
 
 
 class Database {
@@ -8,15 +9,8 @@ class Database {
     }
 
     async init() {
-        const connection = await mysql.createConnection({
-            host: "localhost",
-            user: "igor",
-            database: "vkgroups",
-            password: "2205"
-        });
-
+        const connection = await mysql.createConnection(config);
         this.connection = connection;
-
     }
 
     async getGroupData(id) {

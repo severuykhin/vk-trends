@@ -1,29 +1,12 @@
 const axios = require('axios');
+const keys = require('../config/api_keys');
+const common_config = require('../config/common');
 
 class VkApi {
 
     constructor() {
-
-        this.tokens = [
-            '7e0e5675b30187b871972e352e61eeb7316041c47d2f6340b890d7b7193ffd1644dc85c5a68e0d4c1c2a3',
-            'ef4b27ffb546c2c43d12f61fc97dabef2f06a335397a253aad6fa0688332011850847d636edb846c8dfc0',
-            'f5424cee73d4ee82521d952d0df9e68c3fb0d0a1a8570c4a2ef77535fcdd2921b80915c4af213fe0ee8d0',
-            'bfcfe8ab47ff9356f705658a3a0457ee606d254cabc1d5df40d304e6c5f0373617600945432ec31c7b737',
-            'b2526821bc96107cace445dc1dfe9e6a30d9eeea0fafbccab150bd63df7bca02a591deecbf673df141c74',
-            '7c1bb6a9b0d0b459b529cc6adbb1646d591409f9a02ac29d83a955a79c43ff887dafcb92d1f53d61bc7ba',
-            '1d97c9c24c7d48affc79ab5e6eb8b87c1cf6808e9af1939eb5ab04b7778c82912b8f704e6b1eaaebe72cf',
-            '2d9d54156fa55a9965a2d7cf228da4b604ee1d09767aa8afe6c93dfa482f4e98e24c6329b475c3fdf5999',
-            '317fd30f619310f4a6d654ea419b2ca00ea775cf56c63f00b685de2a940069def0abde97020ac1967066c',
-            'b4ccb301369733c20c36f300047f131ed0cdd9d30904657e51ef7cc8ba6aaa275b28af3221057f11caeeb',
-            '08229b433075c902502a0aba43d469baa870d1228c4d9a1d8f065315b088c2a253c154d1064925fe8c5c3',
-            'f288004307fff601dfad0613bcd060491ca42cfe35995186a1213e9a91369d8e21c47bd93243211b1de72',
-            '8c829f18bfbdcd3c411dea839931492e989f243803795a8088ef3b6ed4b833cfc3fa05ab68037c538875b',
-            '5fc2524df464b89992f2348f1f4c8f9a13f1a0abfe793582574d01475a6ef7071109230e85c896eb47f6c'
-        ];
-
+        this.tokens = [...keys];
         this.activeToken = 0;
-
-
     }
 
     getToken() {
@@ -64,7 +47,7 @@ class VkApi {
                 params: {
                     'code': this.getWallPostsIdsExecuteCode(),
                     'group': `-${vk_group_id}`,
-                    'period': 1,
+                    'period': common_config.days_gap,
                     'access_token': this.getToken(),
                     'v': '5.103'
                 }

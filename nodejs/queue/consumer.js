@@ -31,7 +31,7 @@ class Consumer {
                     }
 
                     channel.consume(`comments`, async (msg) => {
-
+                    
                         try {
                             const mess = JSON.parse(msg.content.toString());
                             const res = await this.processMessage(mess, `comments`);

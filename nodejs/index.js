@@ -27,7 +27,7 @@ app.get('/', (request, response) => {
     response.send('vk groups')
 })
 
-app.get('/api/process/:group_id', async (request, response) => {
+app.post('/api/process/:group_id', async (request, response) => {
 
     let group_id = request.params.group_id;
 

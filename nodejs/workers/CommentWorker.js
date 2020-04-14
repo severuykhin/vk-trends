@@ -70,7 +70,7 @@ class CommentWorker {
     }
 
     async parseComment(comment) {
-
+        
         const full_id = `${Math.abs(comment.owner_id).toString()}_${comment.id}`;
         comment.full_id = full_id;
         const isExists = await this.collection.find({full_id: full_id}, {_id: 1}).limit(1).count();
