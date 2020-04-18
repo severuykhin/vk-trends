@@ -13,4 +13,5 @@ module.exports = function () {
     $.gulp.watch(params.type.images, ["images"]);
     $.gulp.watch(params.type.js, ["js"]);
     $.gulp.watch(params.type.adminJs, ["js"]);
+    $.gulp.watch(params.type.appsJs, ["js"]);
 };

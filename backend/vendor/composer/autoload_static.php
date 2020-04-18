@@ -10,7 +10,9 @@ class ComposerStaticInit9c5cad17b3fdae6d230c8ca9e4288208
         '2cffec82183ee1cea088009cef9a6fc3' => __DIR__ . '/..' . '/ezyang/htmlpurifier/library/HTMLPurifier.composer.php',
         'decc78cc4436b1292c6c0d151b19445c' => __DIR__ . '/..' . '/phpseclib/phpseclib/phpseclib/bootstrap.php',
         'fe1bcd0336136e435eaf197895daf81a' => __DIR__ . '/..' . '/nikic/php-parser/lib/bootstrap.php',
+        'ad155f8f1cf0d418fe49e248db8c661b' => __DIR__ . '/..' . '/react/promise/src/functions_include.php',
         '2c102faa651ef8ea5874edb585946bce' => __DIR__ . '/..' . '/swiftmailer/swiftmailer/lib/swift_required.php',
+        '8592c7b0947d8a0965a9e8c3d16f9c24' => __DIR__ . '/..' . '/elasticsearch/elasticsearch/src/autoload.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -71,6 +73,10 @@ class ComposerStaticInit9c5cad17b3fdae6d230c8ca9e4288208
         array (
             'Symfony\\Component\\Process\\' => 26,
         ),
+        'R' => 
+        array (
+            'React\\Promise\\' => 14,
+        ),
         'P' => 
         array (
             'Psr\\Log\\' => 8,
@@ -81,6 +87,11 @@ class ComposerStaticInit9c5cad17b3fdae6d230c8ca9e4288208
             'Interop\\Queue\\' => 14,
             'Interop\\Amqp\\' => 13,
         ),
+        'G' => 
+        array (
+            'GuzzleHttp\\Stream\\' => 18,
+            'GuzzleHttp\\Ring\\' => 16,
+        ),
         'F' => 
         array (
             'Faker\\' => 6,
@@ -90,6 +101,7 @@ class ComposerStaticInit9c5cad17b3fdae6d230c8ca9e4288208
             'Enqueue\\Dsn\\' => 12,
             'Enqueue\\AmqpTools\\' => 18,
             'Enqueue\\AmqpLib\\' => 16,
+            'Elasticsearch\\' => 14,
             'Egulias\\EmailValidator\\' => 23,
         ),
     );
@@ -227,6 +239,10 @@ class ComposerStaticInit9c5cad17b3fdae6d230c8ca9e4288208
         array (
             0 => __DIR__ . '/..' . '/symfony/process',
         ),
+        'React\\Promise\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/react/promise/src',
+        ),
         'Psr\\Log\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/log/Psr/Log',
@@ -243,6 +259,14 @@ class ComposerStaticInit9c5cad17b3fdae6d230c8ca9e4288208
         array (
             0 => __DIR__ . '/..' . '/queue-interop/amqp-interop/src',
         ),
+        'GuzzleHttp\\Stream\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/ezimuel/guzzlestreams/src',
+        ),
+        'GuzzleHttp\\Ring\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/ezimuel/ringphp/src',
+        ),
         'Faker\\' => 
         array (
             0 => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker',
@@ -258,6 +282,10 @@ class ComposerStaticInit9c5cad17b3fdae6d230c8ca9e4288208
         'Enqueue\\AmqpLib\\' => 
         array (
             0 => __DIR__ . '/..' . '/enqueue/amqp-lib',
+        ),
+        'Elasticsearch\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/elasticsearch/elasticsearch/src/Elasticsearch',
         ),
         'Egulias\\EmailValidator\\' => 
         array (

@@ -88,6 +88,10 @@ AppAsset::register($this);
             font-size: 0.9rem;
         }
 
+        .page-content .panel-body {
+            padding: 0;
+        }
+
         .page-wrapper .sidebar-wrapper,
         .sidebar-wrapper .sidebar-brand>a,
         .sidebar-wrapper .sidebar-dropdown>a:after,
@@ -130,9 +134,17 @@ AppAsset::register($this);
             left: 0px;
         }
 
+        .panel {
+            border-radius: 0px;
+        }
+
+        .page-wrapper .table {
+            margin-bottom: 0;
+        }
+
         @media screen and (min-width: 768px) {
             .page-wrapper.toggled .page-content {
-                padding-left: 300px;
+                padding-left: 263px;
             }
         }
 
@@ -405,11 +417,12 @@ AppAsset::register($this);
             display: inline-block;
             width: 100%;
             padding-left: 0px;
-            padding-top: 20px;
+            padding-top: 15px;
+            padding-bottom: 10px;
         }
 
         .page-wrapper .page-content>div {
-            padding: 20px 10px;
+            padding: 0 10px;
         }
 
         .page-wrapper .page-content {
@@ -540,6 +553,7 @@ AppAsset::register($this);
 
         .rabbit-status {
             height: 100px;
+            overflow: hidden;
         }
 
         .rabbit-status-row {
@@ -547,6 +561,10 @@ AppAsset::register($this);
             color: #fff;
             font-size: 13px;
             display: flex;
+        }
+
+        .block {
+            margin-bottom: 30px;
         }
 
     </style>

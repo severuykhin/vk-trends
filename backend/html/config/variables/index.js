@@ -33,6 +33,7 @@ module.exports = {
             sass    : "blocks/**/**/*.scss",
             js      : "blocks/**/**/*.{js,ts}",
             adminJs : "admin/**/**/*.js",
+            appsJs  : "apps/**/**/*.{js,jsx,ts,tsx}",
             images  : "blocks/**/**/*.{gif,jpg,png,ico,svg}",
             json    : "blocks/**/*.json" 
         },

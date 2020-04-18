@@ -11,6 +11,8 @@ use \common\models\City;
 
 $model->setCategoryIds();
 
+$cities = array_merge([0 => 'Без города'], City::getIds());
+
 ?>
 
 <div class="group-form">
@@ -21,7 +23,7 @@ $model->setCategoryIds();
 
     <?= $form->field($model, 'vk_group_id')->textInput() ?>
 
-    <?= $form->field($model, 'city_id')->dropDownList(City::getIds()) ?>
+    <?= $form->field($model, 'city_id')->dropDownList($cities) ?>
 
     <?= $form->field($model, 'category_ids')->dropDownList(Category::getIds(), [
         'multiple' => true

@@ -2,6 +2,7 @@
 
 use yii\helpers\Html;
 use yii\widgets\DetailView;
+use yii\helpers\Json;
 
 /* @var $this yii\web\View */
 /* @var $model common\models\Group */
@@ -9,33 +10,41 @@ use yii\widgets\DetailView;
 $this->title = $model->name;
 $this->params['breadcrumbs'][] = ['label' => 'Groups', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
+
 ?>
-<div class="group-view">
 
-    <h1><?= Html::encode($this->title) ?></h1>
+<div id="root"></div>
 
-    <p>
-        <?= Html::a('Update', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
-        <?= Html::a('Delete', ['delete', 'id' => $model->id], [
-            'class' => 'btn btn-danger',
-            'data' => [
-                'confirm' => 'Are you sure you want to delete this item?',
-                'method' => 'post',
-            ],
-        ]) ?>
-    </p>
 
-    <?= DetailView::widget([
-        'model' => $model,
-        'attributes' => [
-            'id',
-            'name',
-            'vk_group_id',
-            'city_id',
-            'category_id',
-            'created_at',
-            'updated_at',
-        ],
-    ]) ?>
+<?php
 
-</div>
+$initial_data = '' . Json::encode($data) . '';
+
+$script = <<< JS
+    window.__INITIAL_DATA__ = $initial_data;
+JS;
+//маркер конца строки, обязательно сразу, без пробелов и табуляции
+$this->registerJs($script, yii\web\View::POS_BEGIN);
+
+?>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<script src="/statics/group.js"></script>
+

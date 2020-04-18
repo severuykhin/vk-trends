@@ -10,6 +10,8 @@ use yii\data\ActiveDataProvider;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use common\components\Elastic;
+use yii\helpers\VarDumper as Dump;
 
 /**
  * GroupController implements the CRUD actions for Group model.
@@ -54,8 +56,20 @@ class GroupController extends Controller
      */
     public function actionView($id)
     {
+
+        $model = $this->findModel($id);
+
+        $elastic = new Elastic();
+
+        $comments_verbal_portrait = $elastic->getGroupCommentsVerbalPortrait([
+            'vk_group_id' => $model->vk_group_id
+        ]);
+
         return $this->render('view', [
-            'model' => $this->findModel($id),
+            'model' => $model,
+            'data' => [
+                'comments_verbal_portrait' => $comments_verbal_portrait
+            ]
         ]);
     }
 
@@ -95,7 +109,14 @@ class GroupController extends Controller
     {
         $model = $this->findModel($id);
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        if ($model->load(Yii::$app->request->post())) {
+            $model->save();
+            $data = Yii::$app->request->post('Group');
+            if (isset($data['category_ids'])) {
+                $model->saveIds($data['category_ids']);
+            } else {
+                $model->saveIds([]);
+            }
             return $this->redirect(['view', 'id' => $model->id]);
         }
 

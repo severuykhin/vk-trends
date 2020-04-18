@@ -41,7 +41,8 @@ return [
             'showScriptName' => false,
             'class' => 'common\components\LangUrlManager',
             'rules' => [
-                'group/<id>/process' => 'group/process'
+                'group/<id>/process' => 'group/process',
+                'api/group/vportrait' => 'api/group'
             ]
         ],
         'frontendUrlManager' => [

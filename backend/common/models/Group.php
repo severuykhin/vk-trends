@@ -69,6 +69,7 @@ class Group extends \yii\db\ActiveRecord
         $rows = (new \yii\db\Query())
             ->select(['category_id'])
             ->from('group_to_category')
+            ->where(['group_id' => $this->id])
             ->all();
 
         $ids = array_map(function ($item) {
