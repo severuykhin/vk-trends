@@ -8,7 +8,8 @@ const config = {
     entry  : {
       // main: path.resolve(__dirname, './blocks/index.js'),
       admin : path.resolve(__dirname, './admin/index.js'),
-      group : path.resolve(__dirname, './apps/group/index.js')
+      group : path.resolve(__dirname, './apps/AppGroup/index.js'),
+      trends : path.resolve(__dirname, './apps/AppTrends/index.js')
     },
     mode   : MODE,
     devtool: MODE === 'development' ? 'inline-source-map' : false, // Инициализируем sourcemaps в зависимости от окружения

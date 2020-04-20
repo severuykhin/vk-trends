@@ -27,6 +27,7 @@ return [
             'showScriptName' => false,
             'rules' => [
 	            '' => 'site/index',
+	            'frontend' => 'site/index',
             ]
         ],
         'errorHandler' => [

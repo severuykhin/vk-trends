@@ -51,6 +51,7 @@ class SiteController extends Controller
      */
     public function actionIndex()
 	{
+        return 'sdf';
         return $this->render('index');
 	}
 

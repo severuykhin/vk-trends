@@ -615,6 +615,12 @@ AppAsset::register($this);
                         <li class="header-menu">
                             <span>General</span>
                         </li>
+                        <li class="sidebar-item">
+                            <a href="/backend/trends">
+                                <i class="fa fa-search"></i>
+                                <span>Тренды</span>
+                            </a>
+                        </li>
                         <li class="sidebar-dropdown">
                             <a href="#">
                                 <i class="fa fa-tachometer-alt"></i>

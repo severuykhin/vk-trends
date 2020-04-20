@@ -27,23 +27,6 @@ JS;
 $this->registerJs($script, yii\web\View::POS_BEGIN);
 
 ?>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
 
 
 <script src="/statics/group.js"></script>

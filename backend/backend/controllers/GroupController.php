@@ -65,10 +65,14 @@ class GroupController extends Controller
             'vk_group_id' => $model->vk_group_id
         ]);
 
+        $summary = $elastic->getGroupSummary([
+            'vk_group_id' => $model->vk_group_id
+        ]);
+
         return $this->render('view', [
             'model' => $model,
             'data' => [
-                'comments_verbal_portrait' => $comments_verbal_portrait
+                'summary' => $summary
             ]
         ]);
     }

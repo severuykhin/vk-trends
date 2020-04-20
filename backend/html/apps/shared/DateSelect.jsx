@@ -15,7 +15,11 @@ export default (props) => {
         setEndDate(data.endDate);
         setFocusedInput(data.focusedInput);
 
-        if ((data.startDate && data.endDate) || (!data.startDate && !data.endDate)) {
+        if (!data.startDate && !data.endDate) {
+            onChange({});
+        }
+
+        if ((data.startDate && data.endDate)) {
             onChange({
                 range_start: DateFormatter(data.startDate),
                 range_end: DateFormatter(data.endDate)
