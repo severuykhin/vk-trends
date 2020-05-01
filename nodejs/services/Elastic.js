@@ -1,16 +1,16 @@
 const { Client } = require('@elastic/elasticsearch')
-const format = require('date-fns/format')
-const zonedTimeToUtc = require('date-fns-tz')
 const stop_words = require('../includes/stop_words');
 const moment = require('moment');
 
 const time_format = 'yyyy-MM-dd HH:mm:ss.SSSSSS';
 const time_format_moment = 'YYYY-MM-DD HH:mm:ss.SSSSSS';
 
+const ElasticBoardBody = require('../mappings/ElasticBoardBody');
+
 class Elastic {
 
     constructor() {
-        const client = new Client({ node: 'http://localhost:9200' });
+        const client = new Client({ node: 'http://92.53.104.20:9200' });
         this.client = client;
     }
 
@@ -21,18 +21,23 @@ class Elastic {
         }
 
         try {
-            let com_index_is_exists = await this.client.indices.exists({ index: 'comments' });
+            let com_index_is_exists = await this.client.indices.exists({ index: 'comments2' });
             if (com_index_is_exists && com_index_is_exists.statusCode === 404) {
                 await this.create_comments_index();
             }
 
-            let posts_index_is_exists = await this.client.indices.exists({ index: 'posts' });
+            let posts_index_is_exists = await this.client.indices.exists({ index: 'posts2' });
             if (posts_index_is_exists && posts_index_is_exists.statusCode === 404) {
                 await this.create_posts_index();
             }
 
+            let boards_index_is_exists = await this.client.indices.exists({ index: 'boards2' });
+            if (boards_index_is_exists && boards_index_is_exists.statusCode === 404) {
+                await this.create_boards_index();
+            }
+
         } catch (e) {
-            console.log(e);
+            console.log(e.meta.body.error);
         }
 
 
@@ -40,11 +45,36 @@ class Elastic {
 
     async create_comments_index() {
         return await this.client.indices.create({
-            index: 'comments',
+            index: 'comments2',
             body: {
                 'settings': {
                     'number_of_shards': 1,
-                    'number_of_replicas': 1
+                    'number_of_replicas': 1,
+                    "analysis": {
+                        "filter": {
+                          "ru_stop": {
+                            "type": "stop",
+                            "stopwords": "_russian_"
+                          },
+                          "ru_stemmer": {
+                            "type": "stemmer",
+                            "language": "russian"
+                          }
+                        },
+                        "analyzer": {
+                          "default": {
+                            "char_filter": [
+                              "html_strip"
+                            ],
+                            "tokenizer": "standard",
+                            "filter": [
+                              "lowercase",
+                              "ru_stop",
+                              "ru_stemmer"
+                            ]
+                          }
+                        }
+                    }
                 },
                 'mappings': {
                     "properties": {
@@ -97,11 +127,36 @@ class Elastic {
 
     async create_posts_index() {
         return await this.client.indices.create({
-            index: 'posts',
+            index: 'posts2',
             body: {
                 'settings': {
                     'number_of_shards': 1,
-                    'number_of_replicas': 1
+                    'number_of_replicas': 1,
+                    "analysis": {
+                        "filter": {
+                          "ru_stop": {
+                            "type": "stop",
+                            "stopwords": "_russian_"
+                          },
+                          "ru_stemmer": {
+                            "type": "stemmer",
+                            "language": "russian"
+                          }
+                        },
+                        "analyzer": {
+                          "default": {
+                            "char_filter": [
+                              "html_strip"
+                            ],
+                            "tokenizer": "standard",
+                            "filter": [
+                              "lowercase",
+                              "ru_stop",
+                              "ru_stemmer"
+                            ]
+                          }
+                        }
+                      }
                 },
                 'mappings': {
                     "properties": {
@@ -154,9 +209,89 @@ class Elastic {
         });
     }
 
+    async create_boards_index() {
+        return await this.client.indices.create({
+            index: 'boards2',
+            body: {
+                'settings': {
+                    'number_of_shards': 1,
+                    'number_of_replicas': 1,
+                    "analysis": {
+                        "filter": {
+                          "ru_stop": {
+                            "type": "stop",
+                            "stopwords": "_russian_"
+                          },
+                          "ru_stemmer": {
+                            "type": "stemmer",
+                            "language": "russian"
+                          }
+                        },
+                        "analyzer": {
+                          "default": {
+                            "char_filter": [
+                              "html_strip"
+                            ],
+                            "tokenizer": "standard",
+                            "filter": [
+                              "lowercase",
+                              "ru_stop",
+                              "ru_stemmer"
+                            ]
+                          }
+                        }
+                      }
+                },
+                'mappings': {
+                    "properties": {
+                        "mongo_id": {type: "text"},
+                        "vk_id": { type: "long" },
+                        "from_id": { type: "long" },
+                        "report_id": { type: "text" },
+                        "owner_id": { type: "long" },
+                        "full_id": { type: "text" },
+                        "@timestamp": {
+                            "type": "date",
+                            "format": time_format
+                        },
+                        "index_time": {
+                            "type": "date",
+                            "format": time_format
+                        },
+                        "keys": {
+                            "type": "text",
+                            "norms": true,
+                            "fields": {
+                                "keyword": {
+                                    "type": "keyword",
+                                    "ignore_above": 1024
+                                }
+                            }
+                        },
+                        "text": { "type": 'text' },
+                        "length": { "type": "integer" },
+                        "categories": {
+                            "type": "text",
+                            "norms": true,
+                            "fields": {
+                                "keyword": {
+                                    "type": "keyword",
+                                    "ignore_above": 1024
+                                }
+                            }
+                        },
+                        "city": {"type": "text"},
+                        "lng": {"type": "float"},
+                        "ltd": {"type": "float"}
+                    }
+                }
+            }
+        });
+    }
+
     async indexComment(comment) {
         const res = await this.client.index({
-            index: 'comments',
+            index: 'comments2',
             body: {
                 "mongo_id": comment.mongo_id,
                 "vk_id": comment.id,
@@ -183,7 +318,7 @@ class Elastic {
 
     async indexPost(post) {
         const res = await this.client.index({
-            index: 'posts',
+            index: 'posts2',
             body: {
                 "mongo_id": post.mongo_id,
                 "report_id": post.report_id ? post.report_id : '',
@@ -204,6 +339,15 @@ class Elastic {
                 "lng": post.lng,
                 "ltd": post.ltd
             }
+        });
+
+        return res;
+    }
+
+    async indexBoardComment(comment) {
+        const res = await this.client.index({
+            index: 'boards2',
+            body: ElasticBoardBody(comment)
         });
 
         return res;

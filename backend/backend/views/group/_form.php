@@ -11,7 +11,9 @@ use \common\models\City;
 
 $model->setCategoryIds();
 
-$cities = array_merge([0 => 'Без города'], City::getIds());
+$cities = City::getIds();
+
+$cities[0] = 'Без города';
 
 ?>
 

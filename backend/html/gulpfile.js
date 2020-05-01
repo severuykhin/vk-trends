@@ -3,9 +3,12 @@
 const { plugins: { gulp } } = require("./config/variables");
 
 const createTask = function (taskName, beforeTasks) {
-    if ( !beforeTasks ) return gulp.task( taskName, require(`./config/${taskName}`) );
+    console.log(taskName);
+    const task = require(`./config/${taskName}`)
+    console.log(task);
+    if ( !beforeTasks ) return gulp.task( taskName, task );
 
-    return gulp.task( taskName, beforeTasks, require(`./config/${taskName}`) );
+    return gulp.task( taskName, beforeTasks, task );
 };
 
 const tasks = [
@@ -21,7 +24,7 @@ const tasks = [
     [ "adminCss" ],
     [ "images" ],
     [ "jsLibs" ],
-    [ "js", ["jsLibs"] ],
+    [ "js" ],
     [ "jquery" ],
     [ "createFirstLevelBlocks" ],
     [ "createBlocks" ]

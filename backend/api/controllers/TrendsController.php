@@ -55,6 +55,20 @@ class TrendsController extends Controller
     
     public function actionSearch()
     {
+
+        /**
+         * + Запрос - ключевое слово по ключевым словам
+         * + запрос - фраза по тексту
+         * + Дата начала 
+         * + Дата конца
+         * + Шаг отображения - день, час, месяц, неделя
+         * + Точность - от 0 до 100% - через slop
+         * Города, Города - по названию
+         * Гео позиция по координатам
+         * + Категория
+         * + Тип - комментарии, посты, обсуждения - вариации, по отдельности и все вместе
+         */
+
         $query = Yii::$app->request->get('query');
 
         $elastic = new Elastic();
@@ -67,6 +81,7 @@ class TrendsController extends Controller
 
         return [
             'result' => 'success',
+            'prev_query' => Yii::$app->request->get(),
             'payload' => $query_data_set
         ];
     }

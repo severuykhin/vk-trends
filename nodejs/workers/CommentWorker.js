@@ -1,6 +1,7 @@
 const VkApi = require('./VkApi');
 const Mongo = require('./Mongo');
 const Elastic = require('../services/Elastic');
+const TextCleaner = require('../services/TextCleaner');
 
 class CommentWorker {
 
@@ -13,6 +14,7 @@ class CommentWorker {
         this.report = {};
 
         this.collection = Mongo.getCommentsCollection();
+        this.tc = new TextCleaner();
     }
 
     async run() {
@@ -75,20 +77,24 @@ class CommentWorker {
         comment.full_id = full_id;
         const isExists = await this.collection.find({full_id: full_id}, {_id: 1}).limit(1).count();
 
-        if (isExists > 0) return false;
+        if (isExists > 0 || (comment.text && false === this.tc.check(comment.text))) return false;
 
         comment.city = this.config.group_config.city_id.toString();
         comment.categories = this.config.group_config.categories;
         comment.lng = this.config.group_config.lng;
         comment.ltd = this.config.group_config.ltd;
 
-        let insertRes = await this.collection.insertOne(comment);
+        this.collection.insertOne(comment)
+            .then((insertRes) => {
+                if (insertRes.insertedId) {
+                    comment.mongo_id = insertRes.insertedId;
+                    console.log(insertRes.insertedId);
+                    Elastic.indexComment(comment)
+                        .then(data => { })
+        
+                }
+            })
 
-        if (insertRes.insertedId) {
-            comment.mongo_id = insertRes.insertedId;
-            const res = await Elastic.indexComment(comment);
-
-        }
 
     }
 

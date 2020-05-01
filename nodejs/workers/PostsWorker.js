@@ -28,11 +28,14 @@ class PostsWorker {
             post.lng = this.config.group_config.lng;
             post.ltd = this.config.group_config.ltd;
 
-            const mongoRes = await this.collection.insertOne(post);
-            if (mongoRes.insertedId) {
-                post.mongo_id = mongoRes.insertedId;
-                const res = await Elastic.indexPost(post);
-            }
+            this.collection.insertOne(post)
+                .then((mongoRes) => {
+                    if (mongoRes.insertedId) {
+                        post.mongo_id = mongoRes.insertedId;
+                        Elastic.indexPost(post)
+                            .then(data => { })
+                    }
+                })
         }
 
         return true;

@@ -11,7 +11,7 @@ class GroupIndex {
 
         const self = this;
 
-        this.DOMMap.buttons.on('click', function () {
+        $(document).on('click', '[data-role="group-index-btn"]', function () {
             let vkGroupId = $(this).data('id');
             self.runProcess(vkGroupId);
         });

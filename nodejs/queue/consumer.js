@@ -2,6 +2,7 @@ const amqp = require('amqplib/callback_api');
 const CommentWorker = require('../workers/CommentWorker');
 const LikesWorker = require('../workers/LikesWorker');
 const PostsWorker = require('../workers/PostsWorker');
+const BoardsWorker = require('../workers/BoardsWorker');
 const Mongo = require('../workers/Mongo');
 
 class Consumer {
@@ -76,7 +77,7 @@ class Consumer {
                                     });
                                     setTimeout(() => {
                                         channel.reject(msg);
-                                    }, 100);
+                                    }, 50);
                                 }
                             }
                         } catch (e) {
@@ -112,6 +113,31 @@ class Consumer {
                     }, { noAck: false });
                 });
 
+                channel.assertQueue(`boards`, { durable: true, noAck: false }, (err, ok) => {
+                    if (err) {
+                        console.log(err);
+                    }
+
+                    channel.consume('boards', async (msg) => {
+
+                        try {
+                            const mess = JSON.parse(msg.content.toString());
+                            const res = await this.processMessage(mess, `boards`);
+
+                            if (res) {
+                                channel.ack(msg);
+                            } else {
+                                console.log(false, 'boards');
+                                channel.reject(msg);
+                            }
+                        } catch (e) {
+                            console.log(e);
+                            channel.reject(msg);
+                        }
+
+                    }, { noAck: false });
+                });
+
             })
         })
     }
@@ -130,6 +156,10 @@ class Consumer {
                     return res;
                 case 'posts':
                     worker = new PostsWorker(data);
+                    res = await worker.run();
+                    return res;
+                case 'boards':
+                    worker = new BoardsWorker(data);
                     res = await worker.run();
                     return res;
                 case 'likes':

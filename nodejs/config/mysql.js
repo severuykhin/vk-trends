@@ -1,6 +1,6 @@
 module.exports = {
-    host: "localhost",
-    user: "root",
+    host: "45.128.204.62",
+    user: "feedler",
     database: "vkgroups",
-    password: "123"
+    password: "d85GyrHZ"
 };

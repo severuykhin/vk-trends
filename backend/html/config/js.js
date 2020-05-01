@@ -5,8 +5,9 @@ const { params,  plugins : $ } = require("./variables");
 let js = params.js.slice();
 js.push(params.type.js);
 
-module.exports = () =>
-    $.gulp.src(js)
+module.exports = function () {
+    console.log('sdf');
+    return $.gulp.src(js)
         .pipe($.plumber())
         .pipe($.jshint({
             esversion: 6
@@ -17,3 +18,4 @@ module.exports = () =>
         .pipe($.gulp.dest(params.prod))
         .pipe($.gulp.dest(params.site))
         .pipe($.reload({ stream: true }));
+}

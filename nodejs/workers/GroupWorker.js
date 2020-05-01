@@ -9,12 +9,20 @@ class GroupWorker {
 
     constructor(producer) {
         this.producer = producer;
+    }   
+
+    async load(group_id) {
+        this.group_config = await this.getGroupConfig(group_id);
+
+        if (!this.group_config) {
+            throw new Error('Error while loading group config');
+        }
     }
 
-    async run(group_id) {
+    async run() {
 
-        const group_config = await this.getGroupConfig(group_id);
-        
+        const group_id = this.group_config.vk_group_id;
+
         const response = await VkApi.getWallPostsIds(group_id)
 
         if (response.result === 'error') {
@@ -61,7 +69,7 @@ class GroupWorker {
                 total: items.length,
                 index: index + 1,
                 post_id: item,
-                group_config: group_config,
+                group_config: this.group_config,
             };        
             this.producer.send(msg);        
         });
@@ -72,7 +80,7 @@ class GroupWorker {
             const msg_post = {
                 type: 'posts',
                 report_id: report_id,
-                group_config: group_config,
+                group_config: this.group_config,
                 data: post
             };
             this.producer.send(msg_post);        
@@ -81,6 +89,57 @@ class GroupWorker {
         return report;
 
     }
+
+    async runBoards() {
+        const boards = await VkApi.getBoardsIds(this.group_config.vk_group_id);
+        
+        if (boards.result === 'error') {
+            return boards;
+        }
+
+        const report_id = `${Date.now()}-${this.group_config.vk_group_id}`;
+
+        let report;
+
+        try {
+            const reportsCollection = Mongo.getReportsCollection();
+
+            if (reportsCollection) {
+                report = await reportsCollection.insertOne({
+                    type: 'boards',
+                    report_id: report_id,
+                    total: boards.length,
+                    errors: 0,
+                    success: 0,
+                    time_start: new Date(),
+                    time_end: null,
+                    status: 0
+                });
+            }
+
+        } catch(e) {
+            return {
+                'result': 'error',
+                'message': e.message
+            };
+        }
+
+        boards.forEach(async (item, index) => {
+            const msg = {
+                type: 'boards',
+                report_id: report_id,
+                total: boards.length,
+                index: index + 1,
+                board_id: item,
+                group_config: this.group_config,
+            };        
+            this.producer.send(msg);        
+        });
+
+        return report;
+    }
+
+    
 
     async getGroupConfig(group_id) {
         

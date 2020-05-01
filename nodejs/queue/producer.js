@@ -27,6 +27,7 @@ class Producer {
 
         channel.assertQueue(`comments`, { durable: true, noAck: false });
         channel.assertQueue(`posts`, { durable: true, noAck: false });
+        channel.assertQueue(`boards`, { durable: true, noAck: false });
 
       })
     })
@@ -45,6 +46,9 @@ class Producer {
     }
     if (message.type === 'posts') {
       result = this.channel.sendToQueue(`posts`, Buffer.from(JSON.stringify(message)));
+    }
+    if (message.type === 'boards') {
+      result = this.channel.sendToQueue(`boards`, Buffer.from(JSON.stringify(message)));
     }
 
     return result;

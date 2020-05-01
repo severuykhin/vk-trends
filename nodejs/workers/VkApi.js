@@ -62,6 +62,118 @@ class VkApi {
         }
     }
 
+    async getBoardsIds(vk_group_id) {
+        try {
+            const response = await axios.get('https://api.vk.com/method/board.getTopics', {
+                params: {
+                    'group_id': `${vk_group_id}`,
+                    'order': 1,
+                    'access_token': this.getToken(),
+                    'v': '5.103'
+                }
+            });
+
+            if (response.data.response && response.data.response.items) {
+                return response.data.response.items.map(i => i.id);
+            } else {
+                return {
+                    result: 'error',
+                    message: `Error while getting boards for group ${vk_group_id}`    
+                };
+            } 
+        } catch(e) {
+            return {
+                result: 'error',
+                message: e.message
+            };
+        }
+    }
+
+    async getBoardComments(board_id, vk_group_id) {
+        try {
+            const response = await axios.get('https://api.vk.com/method/execute', {
+                params: {
+                    'code': this.getBoardCommentsExecuteCode(),
+                    'group_id': `${vk_group_id}`,
+                    'topic_id': `${board_id}`,
+                    'access_token': this.getToken(),
+                    'v': '5.103'
+                }
+            });
+            return response.data;
+        } catch(e) {
+            return {
+                result: 'error',
+                message: e.message
+            };
+        }
+    }
+
+    getBoardCommentsExecuteCode() {
+        return `
+            var _offset = 0;
+            var resp = API.board.getComments({
+                group_id: Args.group_id,
+                topic_id: Args.topic_id, 
+                v: "5.103",  
+                count: "100", 
+                offset: _offset, 
+                extended: 1,
+                sort: 'asc'
+            });
+
+            if (resp.errors) {
+                return {
+                    result: "error",
+                    errors: resp.errors
+                };
+            };
+
+            var total_count = resp.count;
+            var resp_count = resp.items.length;
+
+            var result = {
+                items: resp.items,
+                total_count: resp.count
+            };
+
+            if (total_count <= resp_count) {
+                return result;
+            };
+
+            var count = 1;
+
+            while(result.items.length < total_count && count <= 20) {
+
+                _offset = _offset + 100;
+
+                var resp = API.board.getComments({
+                    group_id: Args.group_id,
+                    topic_id: Args.topic_id, 
+                    v: "5.103",  
+                    count: "100", 
+                    offset: _offset, 
+                    extended: 1,
+                    sort: 'asc'
+                });
+
+                if (resp.items) {
+                    var i = 0;
+                    while (i < resp.items.length) {
+                        result.items.push(resp.items[i]);
+                        i = i + 1;
+                    };
+                };
+
+                count = count + 1;
+            }
+
+            result.api_request_count = count;
+
+            return result;
+        `;
+    }
+
     getPostCommentsExecuteCode() {
         return `
             var _offset = 0;

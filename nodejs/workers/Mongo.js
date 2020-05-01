@@ -2,7 +2,7 @@ const MongoClient = require("mongodb").MongoClient;
 
 class MongoConstructor {
     constructor() {
-        this.url = 'mongodb://localhost:27017/vkgroups';
+        this.url = 'mongodb://vkgroups:msx2pt9b@45.128.204.62:27017/vkgroups?authSource=admin';
         this.client = null;
         this.db = null;
     }
@@ -44,6 +44,16 @@ class MongoConstructor {
             const db = this.client.db('vkgroups');
             const posts = db.collection('posts');
             return posts;
+        } else {
+            return null;
+        }
+    }
+
+    getBoardsCollection() {
+        if (this.client) {
+            const db = this.client.db('vkgroups');
+            const boards = db.collection('boards');
+            return boards;
         } else {
             return null;
         }
