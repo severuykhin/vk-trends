@@ -57,7 +57,7 @@
     "@simonwep/pickr": "^1.4.7",
     "@types/jquery": "^3.3.31",
     "apexcharts": "^3.18.1",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "evergreen-ui": "^4.25.0",
     "moment": "^2.24.0",
     "react": "^16.9.0",
